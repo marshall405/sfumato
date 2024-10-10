@@ -45,9 +45,9 @@
                 </div>
             </div>
         </div>  
-    <div id="info" class="container mx-auto my-4">
-        <div class="bg-black w-full h-96">
-                <!-- <iframe
+    <div id="info" class="container mx-auto my-4 px-2 ">
+        <div class="bg-black w-full h-96 rounded-lg overflow-hidden">
+                <iframe
                 class="w-full h-96"
                 style="border:0"
                 loading="lazy"
@@ -55,34 +55,37 @@
                 referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvPa6nI-mo5AC0qu2OTrDWjbEMwjwSE-U
                 &q=4995+Carnes+Dr,Alton+IA&zoom=12">
-            </iframe> -->
+            </iframe>
         </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 md:divide-x divide-y md:divide-y-0">
-                
-                <div class="grid grid-cols-2 gap-4 items-center justify-center md:flex p-4">
-                    <i class="inline-block w-4 fa fa-map-marker" aria-hidden="true"></i> 
-                    <div>
-                        4995 Carnes Dr  <br/> Alton, IA
-                    </div>
+        <div class="flex flex-row flex-wrap gap-4 my-4">
+            
+            <div class="flex flex-col gap-2 basis-1/4 grow bg-zinc-950 rounded-lg content-center justify-items-center text-center min-w-40 px-2 py-2 text-zinc-400">
+                <div>
+                    <i class="inline-block fa fa-map-marker text-4xl" aria-hidden="true"></i> 
                 </div>
-                
-                <div class="grid grid-cols-2 gap-4 items-center justify-center md:flex p-4">
-                    <i class="inline-block w-4 fa fa-phone" aria-hidden="true"></i>
-                    <div>
-                        (712) 737-3007
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4 items-center justify-center md:flex p-4">
-                    <i class="inline-block w-4 fa fa-envelope" aria-hidden="true"></i> 
-                    <div>
-                        <a href="mailto:sfumatopizzeria@gmail.com">sfumatopizzeria@gmail.com</a>
-                    </div>
-                </div>
-                
+                <h3 class="text-xl"> Address </h3>
+                <p>4995 Carnes Dr  <br/> Alton, IA</p>
             </div>
+            
+            <div class="flex flex-col gap-2 basis-1/4 grow bg-zinc-950 rounded-lg content-center justify-items-center text-center min-w-40 px-2 py-2 text-zinc-400">
+                <div>
+                    <i class="inline-block fa fa-phone text-4xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl"> Contact </h3>
+                <p>(712) 737-3007</p>
+            </div>
+            
+            <div class="flex flex-col gap-2 basis-1/4 grow bg-zinc-950 rounded-lg content-center justify-items-center text-center min-w-40 px-2 py-2 text-zinc-400">
+                <div>
+                    <i class="inline-block fa fa-envelope text-4xl" aria-hidden="true"></i> 
+                </div>
+                <h3 class="text-xl"> Email </h3>
+                <p><a href="mailto:sfumatopizzeria@gmail.com">sfumatopizzeria@gmail.com</a></p>
+            </div>
+            
         </div>
+    </div>
         
         <footer class="bg-zinc-950 text-zinc-50">
             <div class="container mx-auto py-8">
