@@ -10,9 +10,16 @@ header {
 
 /* Hero */
 .hero {
-  background-image: url('/assets/images/hero_fire_2.jpeg');
   background-size: cover;
   background-position: center;
+}
+
+.hero-home {
+  background-image: url('/assets/images/hero_fire_2.jpeg');
+}
+
+.hero-menu {
+  background-image: url('/assets/images/sfumato_oven.jpg');
 }
 
 .hero-wrapper h2 {
@@ -33,7 +40,7 @@ header {
 }
 
 /* Images */
-section img {
+section img.img-large {
   filter: drop-shadow(6px 6px 4px rgb(67, 67, 67)) brightness(0.8);
 }
 
@@ -45,6 +52,12 @@ section img {
   padding: 5px;
 }
 
+.menu-item img {
+  width: 125px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 .menu-item-header {
   font-size: 1.8em;
   margin-bottom: 5px;
@@ -52,6 +65,16 @@ section img {
   align-items: center;
   gap: 15px;
   text-transform: uppercase;
+}
+/* Smaller screens */
+@media (max-width: 768px) {
+  .menu-item img {
+    width: 75px;
+    height: 125px;
+  }
+  .menu-item-header {
+    font-size: 1.2em;
+  }
 }
 
 .menu-item-header .menu-item-price {
