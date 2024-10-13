@@ -20,29 +20,29 @@ header,nav {
 }
 
 /* Hero */
-.hero {
+.hero, .background-image {
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .home {
   background-image: url('/assets/images/hero_fire_2.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 .contact {
   background-image: url('/assets/images/sfumato_rest.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 .menu {
   background-image: url('/assets/images/sfumato_oven.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
+
+/* small screens media query*/
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 
 .hero-wrapper h2 {
   font-size: 7em;
