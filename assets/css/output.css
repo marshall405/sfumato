@@ -940,13 +940,17 @@ header,nav {
 
 /* Hero */
 
-.hero, .background-image {
+.bg {
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
-.home {
+.bg-home {
   background-image: url('/assets/images/hero_fire_2.jpeg');
 }
 
@@ -954,16 +958,8 @@ header,nav {
   background-image: url('/assets/images/sfumato_rest.jpg');
 }
 
-.menu {
+.bg-menu {
   background-image: url('/assets/images/sfumato_oven.jpg');
-}
-
-/* small screens media query*/
-
-@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll;
-  }
 }
 
 .hero-wrapper h2 {
