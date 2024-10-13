@@ -40,7 +40,7 @@ header {
 }
 
 /* Images */
-section img.img-large {
+section img.img-drop-shadow {
   filter: drop-shadow(6px 6px 4px rgb(67, 67, 67)) brightness(0.8);
 }
 
@@ -59,22 +59,23 @@ section img.img-large {
   border-radius: 5px;
 }
 .menu-item-header {
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-bottom: 5px;
   display: flex;
   align-items: center;
   gap: 15px;
   text-transform: uppercase;
+  justify-content: space-between;
 }
 /* Smaller screens */
 @media (max-width: 768px) {
-  .menu-item img {
+  /* .menu-item img {
     width: 75px;
     height: 125px;
   }
   .menu-item-header {
     font-size: 1.2em;
-  }
+  } */
 }
 
 .menu-item-header .menu-item-price {
