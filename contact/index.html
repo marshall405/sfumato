@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/assets/css/output.css">
     <script src="https://kit.fontawesome.com/b8cf95d72b.js" crossorigin="anonymous"></script>
 </head>
-<body class="h-screen">
+<body class="">
     <header class="flex flex-col justify-between items-center sm:flex-row gap-4 p-4 w-full">
         <a class="inline-block" href="/">
             <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
@@ -25,14 +25,10 @@
         </nav>
     </header>
 
-    <main class="bg-zinc-50 p-4 md:p-8">
-
+    <main class="bg-zinc-50/90 p-4 md:p-8">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
-                <div class="flex flex-col justify-center items-center">
-                    <img class="img-drop-shadow rounded-lg" src="/assets/images/sfumato_rest.jpg" alt="Pizza restaurant">
-                </div>
-                <div class="flex flex-col justify-center items-center">
+                <div class="flex flex-col justify-center items-center pt-8">
                     <h2 class="text-4xl font-bold mb-4 text-zinc-700 uppercase">Find Us</h2>
                     <p class="text-zinc-400 text-2xl lg:text-3xl tracking-wide leading-snug text-center">
                         Located in the heart of Carnes, Sfumato Pizzeria is the perfect place to enjoy a delicious pizza with friends and family.
@@ -41,21 +37,22 @@
                         4995 Carnes Dr. <br> Alton, IA 51003
                     </p>
                 </div>
+                <div class="flex flex-col md:flex-row bg-black w-full rounded overflow-hidden my-10">
+                    <iframe
+                    class="w-full h-96"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvPa6nI-mo5AC0qu2OTrDWjbEMwjwSE-U
+                    &q=4995+Carnes+Dr,Alton+IA&zoom=12">
+                    </iframe>
+                </div>
             </div>
         </div>
     
         <div class="container mx-auto my-10">
-            <div class="flex flex-col md:flex-row bg-black w-full rounded overflow-hidden my-10">
-                <iframe
-                class="w-full h-96"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvPa6nI-mo5AC0qu2OTrDWjbEMwjwSE-U
-                &q=4995+Carnes+Dr,Alton+IA&zoom=12">
-                </iframe>
-            </div>
+            
         </div>
         
         <div class="container mx-auto my-10 bg-zinc-50 rounded p-3.5">

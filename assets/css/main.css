@@ -31,6 +31,12 @@ header,nav {
   background-position: center;
   background-attachment: fixed;
 }
+.contact {
+  background-image: url('/assets/images/sfumato_rest.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 .menu {
   background-image: url('/assets/images/sfumato_oven.jpg');
   background-size: cover;
