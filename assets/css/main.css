@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Your custom styles here */
 
-header {
+body {
+  min-width: 360px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header,nav {
   background: #fff;
+  font-weight: 800;
 }
 
 /* Hero */
@@ -14,12 +25,17 @@ header {
   background-position: center;
 }
 
-.hero-home {
+.home {
   background-image: url('/assets/images/hero_fire_2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-
-.hero-menu {
+.menu {
   background-image: url('/assets/images/sfumato_oven.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hero-wrapper h2 {
@@ -40,14 +56,11 @@ header {
 }
 
 /* Images */
-section img.img-drop-shadow {
+img.img-drop-shadow {
   filter: drop-shadow(6px 6px 4px rgb(67, 67, 67)) brightness(0.8);
 }
 
 /* Menu */
-.menu {
-  box-shadow: 0px 0px 4px rgb(205 214 210);
-}
 .menu-item {
   padding: 5px;
 }
