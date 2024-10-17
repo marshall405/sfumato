@@ -596,10 +596,6 @@ video {
   margin: auto;
 }
 
-.m-24 {
-  margin: 6rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -613,6 +609,10 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
 }
 
 .mb-4 {
@@ -631,16 +631,8 @@ video {
   margin-top: 3rem;
 }
 
-.mt-24 {
-  margin-top: 6rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-14 {
-  margin-bottom: 3.5rem;
 }
 
 .inline-block {
@@ -862,21 +854,12 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-center {
@@ -984,6 +967,7 @@ body {
 header,nav {
   background: #fff;
   font-weight: 800;
+  z-index: 2;
 }
 
 /* Hero */
@@ -1116,6 +1100,77 @@ img.img-drop-shadow {
       transform: translateY(0);
     }
   }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-20px);
+    }
+
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .hero-text-menu {
+    display: flex;
+  }
+
+  .hero-text-menu > span:nth-child(1) {
+    animation: bounce 1.5s ease-in-out;
+  }
+
+  .hero-text-menu > span:nth-child(2) {
+    animation: bounce 1.5s ease-in-out 0.25s;
+  }
+
+  .hero-text-menu > span:nth-child(3) {
+    animation: bounce 1.5s ease-in-out .5s;
+  }
+
+  .hero-text-menu > span:nth-child(4) {
+    animation: bounce 1.5s ease-in-out .75s;
+  }
+
+  .hero-text-home > span:nth-child(1) {
+    transform: translateY(100%);
+    animation: fromBottom 1.5s ease-in-out forwards;
+  }
+
+  .hero-text-home > span:nth-child(2) {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fromBottom 1.5s ease-in-out 0.25s forwards;
+  }
+
+  .hero-text-home > span:nth-child(3) {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fromBottom 1.5s ease-in-out .5s forwards;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      color: rgb(211, 88, 26);
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    75% {
+      color: #fff;
+      transform: translateY(-10%);
+      opacity: 1;
+    }
+
+    100% {
+      color: rgb(242, 242, 242);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
 
 /* Utiliies */
@@ -1179,27 +1234,16 @@ img.img-drop-shadow {
     gap: 3.5rem;
   }
 
-  .md\:p-8 {
-    padding: 2rem;
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:p-0 {
     padding: 0px;
   }
 
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:text-2xl {

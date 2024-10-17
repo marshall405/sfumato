@@ -25,6 +25,7 @@ body {
 header,nav {
   background: #fff;
   font-weight: 800;
+  z-index: 2;
 }
 
 /* Hero */
@@ -148,7 +149,70 @@ img.img-drop-shadow {
       }
   }
   
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+  }
 
+  .hero-text-menu {
+    display: flex;
+  }
+  .hero-text-menu > span:nth-child(1) {
+      
+      animation: bounce 1.5s ease-in-out;
+  }
+  .hero-text-menu > span:nth-child(2) {
+      
+      animation: bounce 1.5s ease-in-out 0.25s;
+  }
+  .hero-text-menu > span:nth-child(3) {
+      
+      animation: bounce 1.5s ease-in-out .5s;
+  }
+  .hero-text-menu > span:nth-child(4) {
+      
+      animation: bounce 1.5s ease-in-out .75s;
+  }
+
+  .hero-text-home > span:nth-child(1) {
+      transform: translateY(100%);
+      animation: fromBottom 1.5s ease-in-out forwards;
+  }
+  .hero-text-home > span:nth-child(2) {
+      opacity: 0;
+      transform: translateY(100%);
+      animation: fromBottom 1.5s ease-in-out 0.25s forwards;
+  }
+  .hero-text-home > span:nth-child(3) {
+      opacity: 0;
+      transform: translateY(100%);
+      animation: fromBottom 1.5s ease-in-out .5s forwards;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      color: rgb(211, 88, 26);
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    75% {
+      color: #fff;
+      transform: translateY(-10%);
+      opacity: 1;
+    }
+    100% {
+      color: rgb(242, 242, 242);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
 
 
