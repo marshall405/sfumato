@@ -14,18 +14,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="h-screen">
-    
-    <header class="flex flex-col justify-between items-center sm:flex-row gap-4 p-4 w-full">
-        <a class="inline-block" href="/">
-            <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
-        </a>
-        <nav class="sm:flex items-center space-x-8">
-            <a class="nav-link" href="/" class="text-zinc-700">Home</a>
-            <a class="nav-link nav-active" href="/about" class="text-zinc-700">About</a>
-            <a class="nav-link" href="/menu" class="text-zinc-700">Menu</a>
-            <a class="nav-link " href="/contact" class="text-zinc-700">Contact</a>
+    <input id="mobileNavToggle" type="checkbox" class="hidden">
+    <header class="p-4 relative w-full bg-zinc-50">
+        <nav class="flex justify-center items-center gap-12 text-zinc-700">
+            <a class="hidden md:inline nav-link" href="/">Home</a>
+            <a class="hidden md:inline nav-link" href="/menu">Menu</a>
+            <a class="inline-block" href="/">
+                <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
+            </a>
+            <a class="hidden md:inline nav-link nav-active" href="/about">About</a>
+            <a class="hidden md:inline nav-link" href="/contact">Contact</a>
         </nav>
+        <label for="mobileNavToggle" class="mobile-nav-toggle md:hidden absolute left-4 top-4 text-2xl">
+            <div class="top-bar"></div>
+            <div class="middle-bar"></div>
+            <div class="bottom-bar"></div>
+        </label>
     </header>
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="mobile-nav md:hidden fixed top-0 left-0 z-20">
+        <nav class="text-2xl flex flex-col items-center gap-4 text-zinc-700">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/menu" class="nav-link">Menu</a>
+            <a href="/about" class="nav-link nav-active">About</a>
+            <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+    </div>
 
     <main class="p-0 md:p-8 pb-12 bg-zinc-900">
         <div class="container mx-auto mb-14">
@@ -72,5 +86,15 @@
             </div>
         </div>
     </footer>
-    </body>
-    </html>
+
+     <!-- Toogle nav menu -->
+     <script>
+        const nav = document.querySelector('.mobile-nav');
+        const navBtn = document.getElementById('mobileNavToggle');
+        navBtn.addEventListener('click', () => {
+            document.body.classList.toggle('disable-scroll');
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

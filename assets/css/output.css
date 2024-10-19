@@ -588,8 +588,40 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .m-auto {
@@ -735,12 +767,12 @@ video {
   justify-content: center;
 }
 
-.justify-between {
-  justify-content: space-between;
-}
-
 .justify-items-center {
   justify-items: center;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-14 {
@@ -753,12 +785,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden {
@@ -954,29 +980,35 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 /* Applying Roboto to body text */
 
 body {
   min-width: 360px;
   font-family: 'Roboto', sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
   font-optical-sizing: auto;
   font-style: normal;
 }
 
+body:has(#mobileNavToggle:checked) {
+  overflow: hidden;
+}
+
 header,nav {
-  background: #fff;
   font-weight: 800;
-  z-index: 2;
+  z-index: 30;
 }
 
 /* Hero */
 
-.bg {
+.hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: fixed;
   height: 100vh;
   width: 100vw;
   z-index: -1;
@@ -998,6 +1030,66 @@ header,nav {
   font-size: 7em;
   padding-top: 133px;
   /* header height */
+}
+
+.mobile-nav {
+  transition: opacity .2s, height .5s;
+  position: fixed;
+  opacity: 0;
+  height: 0;
+  width: 100vw;
+  background: #fafafa;
+}
+
+#mobileNavToggle:checked~#mobileNav {
+  opacity: 1;
+  height: 100vh;
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity .14s 0s ease-in-out, visibility 0s 0s linear;
+}
+
+.mobile-nav-toggle {
+  top: 20px;
+  left: 40px;
+}
+
+.mobile-nav-toggle .top-bar, .mobile-nav-toggle .middle-bar, .mobile-nav-toggle .bottom-bar {
+  width: 22px;
+  height: 2px;
+  background-color: black;
+  transition: transform .1s 0s ease-in-out, top .1s .1s ease-in-out;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#mobileNavToggle:checked~header .mobile-nav-toggle .top-bar {
+  transform: rotate(45deg);
+  top: 7px;
+}
+
+#mobileNavToggle:checked~header .mobile-nav-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  top: 7px;
+}
+
+#mobileNavToggle:checked~header .mobile-nav-toggle .middle-bar {
+  opacity: 0;
+}
+
+.mobile-nav-toggle .middle-bar {
+  top: 7px;
+}
+
+.mobile-nav-toggle .bottom-bar {
+  top: 14px;
+}
+
+.mobile-nav nav {
+  padding-top: 133px;
 }
 
 /* Nav */
@@ -1119,20 +1211,24 @@ img.img-drop-shadow {
     display: flex;
   }
 
+  .hero-text-menu span {
+    opacity: 0;
+  }
+
   .hero-text-menu > span:nth-child(1) {
-    animation: bounce 1.5s ease-in-out;
+    animation: bounce 1.5s ease-in-out forwards, fadeIn 1.5s ease-in-out forwards;
   }
 
   .hero-text-menu > span:nth-child(2) {
-    animation: bounce 1.5s ease-in-out 0.25s;
+    animation: bounce 1.5s ease-in-out 0.25s forwards, fadeIn 1.5s ease-in-out 0.25s forwards;
   }
 
   .hero-text-menu > span:nth-child(3) {
-    animation: bounce 1.5s ease-in-out .5s;
+    animation: bounce 1.5s ease-in-out .5s forwards, fadeIn 1.5s ease-in-out .5s forwards;
   }
 
   .hero-text-menu > span:nth-child(4) {
-    animation: bounce 1.5s ease-in-out .75s;
+    animation: bounce 1.5s ease-in-out .75s forwards, fadeIn 1.5s ease-in-out .75s forwards;
   }
 
   .hero-text-home > span:nth-child(1) {
@@ -1184,20 +1280,12 @@ img.img-drop-shadow {
     display: inline;
   }
 
-  .sm\:flex {
-    display: flex;
-  }
-
   .sm\:hidden {
     display: none;
   }
 
   .sm\:max-w-56 {
     max-width: 14rem;
-  }
-
-  .sm\:flex-row {
-    flex-direction: row;
   }
 }
 
@@ -1208,6 +1296,14 @@ img.img-drop-shadow {
 
   .md\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+
+  .md\:inline {
+    display: inline;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:max-w-32 {
