@@ -1015,7 +1015,7 @@ header,nav {
 }
 
 .bg-home {
-  background-image: url('/assets/images/hero_fire_2.jpeg');
+  background-image: url('/assets/images/sfumato_oven.jpg');
 }
 
 .contact {
@@ -1023,7 +1023,7 @@ header,nav {
 }
 
 .bg-menu {
-  background-image: url('/assets/images/sfumato_oven.jpg');
+  background-image: url('/assets/images/hero_fire_2.jpeg');
 }
 
 .hero-wrapper h2 {
@@ -1039,6 +1039,7 @@ header,nav {
   height: 0;
   width: 100vw;
   background: #fafafa;
+  visibility: hidden;
 }
 
 #mobileNavToggle:checked~#mobileNav {
