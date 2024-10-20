@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Your custom styles here */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 133px; /* header height */
+}
 
 /* Applying Playfair Display to headings */
 h1, h2, h3, h4, h5, h6 {
@@ -16,6 +20,11 @@ main {
   position: relative;
   z-index: 1;
 }
+
+main > section {
+  margin-top:15px;
+}
+
 /* Applying Roboto to body text */
 
 body {
@@ -25,7 +34,7 @@ body {
   font-style: normal;
 }
 
-body:has(#mobileNavToggle:checked) {
+body.overflow-hidden {
   overflow: hidden;
 }
 
@@ -41,7 +50,6 @@ header,nav {
   background-position: center;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
 }
 
 .bg-home {
@@ -55,31 +63,33 @@ header,nav {
 }
 
 .hero-wrapper h2 {
-  font-size: 7em;
-  padding-top: 133px; /* header height */
+  width: 100%;
+  margin-top: 133px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(64, 62, 62, 0.29);
+  overflow: hidden;
+  /* transform: rotate(-12deg); */
 }
 
+/* Mobile Nav */
 .mobile-nav {
   transition: opacity .2s, height .5s;
   position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fafafa;
+  opacity: 1;
+  transition: opacity .25s ease-in-out, height .25s ease-in-out;
+  overflow: hidden;
+
+}
+.sfumato-hide {
   opacity: 0;
   height: 0;
-  width: 100vw;
-  background: #fafafa;
-  visibility: hidden;
-}
-
-#mobileNavToggle:checked~#mobileNav {
-  opacity: 1;
-  height: 100vh;
-  visibility: visible;
-  pointer-events: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transition: opacity .14s 0s ease-in-out, visibility 0s 0s linear;
-  -moz-transition: opacity .14s 0s ease-in-out, visibility 0s 0s linear;
-  -ms-transition: opacity .14s 0s ease-in-out, visibility 0s 0s linear;
-  -o-transition: opacity .14s 0s ease-in-out, visibility 0s 0s linear;
-  transition: opacity .14s 0s ease-in-out, visibility 0s 0s linear;
+  transition: opacity .25s ease-in-out, height .25s ease-in-out;
 }
 
 .mobile-nav-toggle {
@@ -106,7 +116,7 @@ header,nav {
   right: 0;
 }
 
-#mobileNavToggle:checked~header .mobile-nav-toggle .top-bar {
+body.overflow-hidden > header .mobile-nav-toggle .top-bar {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -115,7 +125,7 @@ header,nav {
   top: 7px;
 }
 
-#mobileNavToggle:checked~header .mobile-nav-toggle .bottom-bar {
+body.overflow-hidden > header .mobile-nav-toggle .bottom-bar {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -123,7 +133,7 @@ header,nav {
   transform: rotate(-45deg);
   top: 7px;
 }
-#mobileNavToggle:checked~header .mobile-nav-toggle .middle-bar {
+body.overflow-hidden > header .mobile-nav-toggle .middle-bar {
   opacity: 0;
 }
 
@@ -162,8 +172,6 @@ img.img-drop-shadow {
 }
 
 .menu-item img {
-  /* width: 125px; */
-  /* height: 200px; */
   object-fit: cover;
   border-radius: 5px;
 }
@@ -192,11 +200,38 @@ img.img-drop-shadow {
   font-size: 1.5em;
   border-left: 2px solid rgb(0, 0, 0);
   padding: 5px 10px;
-  /* height: 100%; */
   display: flex;
   align-items: center;
 } 
 
+/* Hours */
+
+.hours-wrapper {
+  background-image: url('/assets/images/sfumato_rest.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+.hours-wrapper > div {
+  padding: 20px;
+  background: rgba(64, 62, 62, 0.8);
+  border-radius: 16px;
+}
+/* .hour-item {
+  box-shadow: 0 0 2px 1px #e3e3e3, -2px -2px 3px 2px #cccccc;
+} */
+.hour-item {
+  padding: 20px;
+  color: #1e1d1d;
+  background: rgba(255,255,255, 0.49);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(64, 62, 62, 0.29);
+  font-size: 1.4em;
+}
 
 /* Animations */
 
@@ -223,14 +258,12 @@ img.img-drop-shadow {
   }
   .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn .5s ease forwards;
+    animation: fadeIn .2s ease forwards;
   }
 
   @keyframes fadeIn {
       to {
           opacity: 1;
-          transform: translateY(0);
       }
   }
   

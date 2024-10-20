@@ -14,30 +14,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="h-screen">
-    <input id="mobileNavToggle" type="checkbox" class="hidden">
-    <header class="p-4 relative w-full bg-zinc-50">
+     <!-- Header -->
+     <header class="p-4 absolute w-full bg-zinc-50 flex justify-center">
+        <a class="md:grow inline-block" href="/">
+            <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
+        </a>
         <nav class="flex justify-center items-center gap-12 text-zinc-700">
-            <a class="hidden md:inline nav-link" href="/">Home</a>
-            <a class="hidden md:inline nav-link" href="/menu">Menu</a>
-            <a class="inline-block" href="/">
-                <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
-            </a>
+            <a class="hidden md:inline nav-link" href="/#menu">Menu</a>
             <a class="hidden md:inline nav-link nav-active" href="/about">About</a>
-            <a class="hidden md:inline nav-link" href="/contact">Contact</a>
+            <a class="hidden md:inline nav-link " href="/#contact">Contact</a>
+            <a class="hidden md:inline nav-link " href="/#hours">Hours</a>
         </nav>
-        <label for="mobileNavToggle" class="mobile-nav-toggle md:hidden absolute left-4 top-4 text-2xl">
+
+        <button id="mobileNavToggle" class="mobile-nav-toggle md:hidden absolute left-4 top-4 text-2xl">
             <div class="top-bar"></div>
             <div class="middle-bar"></div>
             <div class="bottom-bar"></div>
-        </label>
+        </button>
     </header>
+
     <!-- Mobile Nav -->
-    <div id="mobileNav" class="mobile-nav md:hidden fixed top-0 left-0 z-20">
+    <div id="mobileNav" class="mobile-nav sfumato-hide md:hidden fixed top-0 left-0 z-20">
         <nav class="text-2xl flex flex-col items-center gap-4 text-zinc-700">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/menu" class="nav-link">Menu</a>
+            <a href="/#menu" class="nav-link">Menu</a>
             <a href="/about" class="nav-link nav-active">About</a>
-            <a href="/contact" class="nav-link">Contact</a>
+            <a href="/#contact" class="nav-link">Contact</a>
+            <a href="/#hours" class="nav-link">Hours</a>
         </nav>
     </div>
 
@@ -89,11 +91,22 @@
 
      <!-- Toogle nav menu -->
      <script>
-        const nav = document.querySelector('.mobile-nav');
-        const navBtn = document.getElementById('mobileNavToggle');
-        navBtn.addEventListener('click', () => {
-            document.body.classList.toggle('disable-scroll');
-            nav.classList.toggle('show');
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        /* Toogle nav menu */
+        mobileNavToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileNav.classList.toggle('sfumato-hide');
+            document.body.classList.toggle('overflow-hidden');
+        });
+
+        /* Toogle nav menu hide menu when clicking on nav item */
+        mobileNav.querySelectorAll('.nav-link').forEach((navLink) => {
+            navLink.addEventListener('click', (e) => {
+                mobileNav.classList.toggle('sfumato-hide');
+                document.body.classList.toggle('overflow-hidden');
+            });
         });
     </script>
 </body>

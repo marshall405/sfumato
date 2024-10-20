@@ -13,42 +13,44 @@
     <script src="https://kit.fontawesome.com/b8cf95d72b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <input id="mobileNavToggle" type="checkbox" class="hidden">
-    <header class="p-4 absolute w-full bg-zinc-50">
+<body class="">
+
+    <!-- Header -->
+    <header class="p-4 fixed w-full bg-zinc-50 flex justify-center">
+        <a class="md:grow inline-block" href="/">
+            <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
+        </a>
         <nav class="flex justify-center items-center gap-12 text-zinc-700">
-            <a class="hidden md:inline nav-link nav-active" href="/">Home</a>
-            <a class="hidden md:inline nav-link" href="/menu">Menu</a>
-            <a class="inline-block" href="/">
-                <img class="max-w-48 sm:max-w-56 logo" src="/assets/images/logo.png" alt="Sfumato Pizzeria">
-            </a>
+            <a class="hidden md:inline nav-link" href="/#menu">Menu</a>
             <a class="hidden md:inline nav-link" href="/about">About</a>
-            <a class="hidden md:inline nav-link " href="/contact">Contact</a>
+            <a class="hidden md:inline nav-link " href="/#contact">Contact</a>
+            <a class="hidden md:inline nav-link " href="/#hours">Hours</a>
         </nav>
 
-
-        <label for="mobileNavToggle" class="mobile-nav-toggle md:hidden absolute left-4 top-4 text-2xl">
+        <button id="mobileNavToggle" class="mobile-nav-toggle md:hidden absolute left-4 top-4 text-2xl">
             <div class="top-bar"></div>
             <div class="middle-bar"></div>
             <div class="bottom-bar"></div>
-        </label>
+        </button>
     </header>
+
     <!-- Mobile Nav -->
-    <div id="mobileNav" class="mobile-nav md:hidden fixed top-0 left-0 z-20">
+    <div id="mobileNav" class="mobile-nav sfumato-hide md:hidden fixed top-0 left-0 z-20">
         <nav class="text-2xl flex flex-col items-center gap-4 text-zinc-700">
-            <a href="/" class="nav-link nav-active">Home</a>
-            <a href="/menu" class="nav-link">Menu</a>
+            <a href="/#menu" class="nav-link">Menu</a>
             <a href="/about" class="nav-link">About</a>
-            <a href="/contact" class="nav-link">Contact</a>
+            <a href="/#contact" class="nav-link">Contact</a>
+            <a href="/#hours" class="nav-link">Hours</a>
         </nav>
     </div>
 
+    <!-- Hero -->
     <div class="hero bg-home w-full bg-center bg-cover h-screen relative z-10">
         <div class="flex items-center justify-center w-full h-full bg-black/75"> 
             <div class="text-center hero-wrapper rounded">
                 <div class="container px-4 mx-auto">
-                    <div class="mx-auto text-center"> 
-                        <h2 class="hero-text-home flex flex-wrap justify-center gap-4  md:gap-8 fade-in font-bold"> 
+                    <div class="mx-auto text-center "> 
+                        <h2 class="-rotate-12 hero-text-home text-4xl md:text-6xl lg:text-8xl lg:p-24 p-8 flex justify-center gap-4 md:gap-8 fade-in font-bold"> 
                             <span>Wood</span>
                             <span>Fired</span>
                             <span>Pizza</span>
@@ -58,13 +60,220 @@
             </div>
         </div>
     </div>
+
     <main class="bg-zinc-50/90 p-4 md:p-8 relative z-10">
-        <div class="container max-w-3xl mx-auto p-4  md:p-8 text-center fade-in-timeline">
-            <h2 class="text-2xl md:text-5xl font-bold mb-4 text-zinc-700 uppercase"> Slinging pizza since 2012</h2>
-            <p class="text-lg text-zinc-400">
-                Our fresh daily dough, signature sauce made from imported crushed Marzano tomatoes, and house-made mozzarella set us apart. Topped with hand-chopped ingredients and cooked in a 900-degree wood-fired oven in just 90 seconds, we offer authentic Neapolitan pizza like no other!</div>
+
+        <section class="fade-in-timeline">
+            <p class="text-zinc-500 text-xl md:text-2xl max-w-3xl mx-auto mb-4 tracking-wide leading-snug text-center">
+                What makes Sfumato Pizza special?
             </p>
-        </div>
+            <p class="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-8 tracking-wide leading-snug text-center">
+                Our dough is made fresh each day with only the finest flour. Crushed marzano tomatoes imported from Italy make our signature sauce truly one-of-a kind. Even our mozzarella is made fresh each day in house. Topped with the freshest hand chopped ingredients, your pizza is cooked in a 900 degree oven in just 90 seconds. It's wood-fired Neapolitan Pizza.
+            </p>  
+        </section>
+
+        <!-- Menu -->
+        <section id="menu"class="fade-in-timeline container mx-auto mt-12">
+            <h2 class="text-4xl font-bold mb-4 text-zinc-700 uppercase text-center">Menu</h2>    
+            <div  class="rounded p-4">
+                <h2 class="text-center text-4xl text-zinc-600"> Neapolitan Pizzas </h2>
+                <p class="text-center text-zinc-500">one size | 12" thin crust </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="menu-item flex items-center">
+                        <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Pepperoni Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Pepperoni </h3>
+                                <span class="hidden sm:inline menu-item-price">15</span>
+                            </div>
+                            <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and pepperoni</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">15</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/jalopeno_pizza.jpg" alt="Margherita Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Margherita </h3>
+                                <span class="hidden sm:inline menu-item-price">14</span>
+                            </div>
+                            <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and basil</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">14</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Italian Sausage Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Italian Sausage</h3>
+                                <span class="hidden sm:inline menu-item-price">15</span>
+                            </div>
+                            <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and italian sausage</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">15</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Bianca Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Bianca </h3>
+                                <span class="hidden sm:inline menu-item-price">15</span>
+                            </div>
+                            <p class="text-zinc-700">olive oil, garlic, arugula, prosciutto ham, and mozzarella</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">15</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Basil Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Basil </h3>
+                                <span class="hidden sm:inline menu-item-price">13</span>
+                            </div>
+                            <p class="text-zinc-700">san marzano tomato sauce, garlic, mozzarella, and basil</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">13</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Marinara Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Marinara </h3>
+                                <span class="hidden sm:inline menu-item-price">14</span>
+                            </div>
+                            <p class="text-zinc-700">san marzano tomato sauce, garlic, oregano with cheese</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">14</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Fig & CaperPizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Fig & Caper</h3>
+                                <span class="hidden sm:inline menu-item-price">20</span>
+                            </div>
+                            <p class="text-zinc-700">olive oil, garlic, mozzarella, mushrooms, hot sauce, figs, capers, prosciutto ham topped with arugula</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">20</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Barbeque Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>Barbeque </h3>
+                                <span class="hidden sm:inline menu-item-price">20</span>
+                            </div>
+                            <p class="text-zinc-700">BBQ sauce, mozzarella, red onion, pineapple, cilantro, your choice of meat - italian sausage, pepperoni, prosciutto ham</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">20</span>
+                    </div>
+                    <div class="menu-item flex items-center">
+                       <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="PBR Pizza">
+                        <div class="p-4">
+                            <div class="menu-item-header">
+                                <h3>PBR </h3>
+                                <span class="hidden sm:inline menu-item-price">20</span>
+                            </div>
+                            <p class="text-zinc-700">ranch base (made from scratch), pepperoni, cherrywood smoked bacon, wilted arugula, fresh sliced cherry tomatoes, fresh garlic, parmesean cheese</p>
+                        </div>
+                        <span class="sm:hidden menu-item-price-mobile">20</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br class="">
+        <!-- Contact -->
+        <section id="contact" class="container mx-auto mt-12">
+            <h2 class="text-4xl font-bold mb-4 text-zinc-700 uppercase text-center">Find Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+                <div class="flex flex-col justify-center items-center pt-8">
+                    <p class="text-zinc-400 text-2xl lg:text-3xl tracking-wide leading-snug text-center">
+                        Located in the heart of Carnes, Sfumato Pizzeria is the perfect place to enjoy a delicious pizza with friends and family.
+                    </p>
+                    <p class="text-zinc-700 font-bold text-2xl lg:text-3xl tracking-wide leading-snug text-center mt-12 uppercase">
+                        4995 Carnes Dr. <br> Alton, IA 51003
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row bg-black w-full rounded overflow-hidden my-10">
+                    <iframe
+                    class="w-full h-96"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvPa6nI-mo5AC0qu2OTrDWjbEMwjwSE-U
+                    &q=4995+Carnes+Dr,Alton+IA&zoom=12">
+                    </iframe>
+                </div>
+            </div>
+            <div class="container mx-auto my-10 bg-zinc-50 rounded p-3.5">
+                <div  class="text-center text-2xl md:text-4xl text-zinc-400">
+                    <p class="p-4">Have an event you'd like us to host, reach out! </p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center gap-4 my-4">
+                    <div class="bg-zinc-50 text-center min-w-52 px-2 py-2 text-zinc-400">
+                        <div>
+                            <i class="inline-block fa fa-phone md:text-4xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="md:text-xl"> Phone </h3>
+                        <p>(712) 737-3007</p>
+                    </div>
+                    <div class="bg-zinc-50 text-center min-w-52 px-2 py-2 text-zinc-400">
+                        <div>
+                            <i class="inline-block fa fa-envelope md:text-4xl" aria-hidden="true"></i> 
+                        </div>
+                        <h3 class="md:text-xl"> Email </h3>
+                        <p><a href="mailto:sfumatopizzeria@gmail.com">sfumatopizzeria@gmail.com</a></p>
+                    </div>
+            </div>
+            </div>  
+           
+        </section>
+         
+        <!-- Hours -->
+        <section id="hours" class="fade-in-timeline container mx-auto mt-12">
+            <h2 class="text-4xl font-bold mb-4 text-zinc-700 uppercase text-center">Hours</h2>
+            <div class="hours-wrapper">
+                <div>
+
+                
+                    <div class="flex flex-row flex-wrap gap-4 my-4">
+                        <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div>
+                                <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="md:text-xl"> Thursday </h3>
+                            <p>5 PM - 9 PM</p>
+                        </div>
+                        <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div>
+                                <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i> 
+                            </div>
+                            <h3 class="md:text-xl"> Friday </h3>
+                            <p>5 PM - 9 PM</p>
+                        </div>  
+                        <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div>
+                                <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i> 
+                            </div>
+                            <h3 class="md:text-xl"> Saturday </h3>
+                            <p>5 PM - 9 PM</p>
+                            </div>
+                        <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div>
+                                <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i> 
+                            </div>
+                            <h3 class="md:text-xl"> Sunday </h3>
+                            <p>5 PM - 9 PM</p>
+                        </div>  
+                    </div>
+                    <p class="text-center md:text-2xl m-auto text-zinc-500 p-4 bg-green-50 rounded">
+                        Please check our <a class="font-semibold" href="https://www.facebook.com/profile.php?id=100037636219284">Facebook</a> page to confirm our opening hours, especially during holidays, as we may be closed. Stay updated on any changes to our schedule!
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-zinc-50 p-2">
@@ -83,14 +292,24 @@
         </div>
     </footer>
 
-    <!-- Toogle nav menu -->
     <script>
-        // const nav = document.querySelector('.mobile-nav');
-        // const navBtn = document.getElementById('mobileNavToggle');
-        // navBtn.addEventListener('click', () => {
-        //     document.body.classList.toggle('disable-scroll');
-        //     nav.classList.toggle('show');
-        // });
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        /* Toogle nav menu */
+        mobileNavToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileNav.classList.toggle('sfumato-hide');
+            document.body.classList.toggle('overflow-hidden');
+        });
+
+        /* Toogle nav menu hide menu when clicking on nav item */
+        mobileNav.querySelectorAll('.nav-link').forEach((navLink) => {
+            navLink.addEventListener('click', (e) => {
+                mobileNav.classList.toggle('sfumato-hide');
+                document.body.classList.toggle('overflow-hidden');
+            });
+        });
     </script>
 </body>
 </html>
