@@ -921,9 +921,9 @@
         </div>
 
         <!-- Hero -->
-        <div class="hero bg-home w-full bg-center bg-cover h-screen relative z-10">
+        <div class="hero bg-home w-full bg-center bg-cover relative z-10">
             <div class="flex items-end justify-start w-full h-full bg-black/75"> 
-                <div class="text-zinc-100 text-center hero-wrapper rounded hero-text-home text-xl md:text-2xl p-4 mb-12 fade-in">
+                <div class="text-zinc-100 text-center hero-wrapper text-xl md:text-2xl p-4 fade-in">
                   <a href="/#menu">View our menu <i class="fas fa-arrow-down"></i></a>
                 </div>
             </div>
@@ -1294,7 +1294,7 @@
 
         const header = document.querySelector('header');
         window.addEventListener('scroll', () => {
-            if( window.scrollY > window.innerHeight - 133){
+            if( window.scrollY > window.innerHeight / 2){
                 header.classList.add('white-background');
             }
             else{

@@ -661,10 +661,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -1128,7 +1124,7 @@ header,nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 60vh;
   width: 100vw;
 }
 
@@ -1287,10 +1283,6 @@ img.img-drop-shadow {
   border-radius: 16px;
 }
 
-/* .hour-item {
-  box-shadow: 0 0 2px 1px #e3e3e3, -2px -2px 3px 2px #cccccc;
-} */
-
 .hour-item {
   padding: 20px;
   color: #1e1d1d;
@@ -1331,7 +1323,7 @@ img.img-drop-shadow {
 
   .fade-in {
     opacity: 0;
-    animation: fadeIn .2s ease forwards;
+    animation: fadeIn 2s ease forwards;
   }
 
   @keyframes fadeIn {
