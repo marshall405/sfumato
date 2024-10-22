@@ -8,7 +8,7 @@
 /* Your custom styles here */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 133px; /* header height */
+  scroll-padding-top: 190px; /* header height */
 }
 
 /* Applying Playfair Display to headings */
@@ -16,6 +16,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
+/* SVG LOGO */
+.logo {
+  /* height: 200px; */
+  width: 225px;
+}
+
+
+.wrapper {
+  height: 100vh;
+}
 main {
   position: relative;
   z-index: 1;
@@ -38,11 +48,24 @@ body {
   position: fixed;
   background-color: #fafafa;
   color:rgb(0, 0, 0);
-  transition: all 0.5s;
 }
-.white-background button.mobile-nav-toggle > div {
+
+
+.cls-40 {
+  font-size: 1.2em;
+  fill: #fff;
+}
+.white-background .cls-40,
+.nav-menu-show .cls-40 {
+  fill:rgb(0, 0, 0);
+}
+
+
+.white-background button.mobile-nav-toggle > div,
+.nav-menu-show button.mobile-nav-toggle > div {
   background-color:rgb(0, 0, 0);
 }
+
 body.overflow-hidden {
   overflow: hidden;
 }
@@ -72,15 +95,11 @@ header,nav {
 }
 
 .hero-wrapper h2 {
+  color: #fff;
   width: 100%;
-  margin-top: 133px;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(64, 62, 62, 0.29);
+  margin-bottom: 25px;
+  border-radius: 7px;
   overflow: hidden;
-  /* transform: rotate(-12deg); */
 }
 
 /* Mobile Nav */
@@ -124,7 +143,7 @@ header,nav {
   right: 0;
 }
 
-body.overflow-hidden > header .mobile-nav-toggle .top-bar {
+body.overflow-hidden header .mobile-nav-toggle .top-bar {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -133,7 +152,7 @@ body.overflow-hidden > header .mobile-nav-toggle .top-bar {
   top: 7px;
 }
 
-body.overflow-hidden > header .mobile-nav-toggle .bottom-bar {
+body.overflow-hidden header .mobile-nav-toggle .bottom-bar {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -141,7 +160,7 @@ body.overflow-hidden > header .mobile-nav-toggle .bottom-bar {
   transform: rotate(-45deg);
   top: 7px;
 }
-body.overflow-hidden > header .mobile-nav-toggle .middle-bar {
+body.overflow-hidden header .mobile-nav-toggle .middle-bar {
   opacity: 0;
 }
 
@@ -195,7 +214,7 @@ img.img-drop-shadow {
 }
 
 
-.menu-item-header .menu-item-price {
+.menu-item-price {
   font-size: .7em;
   color: #fff;
   background: rgb(0, 0, 0);
@@ -347,9 +366,24 @@ img.img-drop-shadow {
 
 
 
+/* Toppings  */
 
+.toppings li::before {
+  content: "•";
+  color: rgb(78, 5, 5);
+  margin-right: 5px;
+}
 
+.toppings > div {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
 
+/* WINE */
+.wine {
+  padding: 15px;
+ 
+}
 
 
 
