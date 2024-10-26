@@ -1421,6 +1421,12 @@ img.img-drop-shadow {
   border-radius: 5px;
 }
 
+.toppings h4:before {
+  font-family: 'Roboto', sans-serif;
+  font-size: .8em;
+  content: '$';
+}
+
 /* WINE */
 
 .wine {
