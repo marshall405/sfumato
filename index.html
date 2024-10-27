@@ -941,224 +941,226 @@
             </section>
 
             <!-- Menu -->
-            <section id="menu"class="fade-in-timeline container mx-auto my-24">
-              <div class="relative flex justify-center items-center mb-4 ">
-                <img class="rounded w-24 h-24 absolute" loading="lazy" src="/assets/images/menu_icon.svg" alt="Menu Icon">
-                <h2 class="text-4xl font-bold text-zinc-700 uppercase text-center z-10 bg-zinc-50">Menu</h2>    
+            <div class="fade-in-timeline">
+              <div class="flex justify-center relative ">
+                <img class="rounded w-64 h-64 absolute top-4" loading="lazy" src="/assets/images/menu_icon.svg" alt="Menu Icon">
               </div>
-              <div  class="rounded p-4">
-                  <h2 class="text-center text-4xl text-zinc-600 mt-4"> Neapolitan Pizzas </h2>
-                  <p class="text-center text-zinc-500 mb-4">one size | 12" thin crust </p>
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                      <div class="menu-item flex items-center">
-                          <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Pepperoni Pizza">
-                          <div class="p-4">
+              <section id="menu"class="bg-zinc-50 container mx-auto my-24 border-solid border border-zinc-200 relative">
+                <h2 class="text-4xl font-bold text-zinc-700 uppercase text-center m-4">Menu</h2>    
+                <div  class="rounded p-4">
+                    <h2 class="text-center text-4xl text-zinc-600 mt-4"> Neapolitan Pizzas </h2>
+                    <p class="text-center text-zinc-500 mb-8">one size | 12" thin crust </p>
+                    <div class="menu-wrapper grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div class="menu-item">
+                            <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Pepperoni Pizza">
+                            <div class="p-4 flex flex-col justify-evenly">
+                                <div class="menu-item-header flex">
+                                    <h3>Pepperoni</h3>
+                                    <div class="dotted_line"></div>
+                                    <span class="menu-item-price">15</span>
+                                </div>
+                                <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and pepperoni</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img class="mx-auto" loading="lazy" src="/assets/images/jalopeno_pizza.jpg" alt="Margherita Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
-                                  <h3>Pepperoni </h3>
-                                  <span class="hidden sm:inline menu-item-price">15</span>
-                              </div>
-                              <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and pepperoni</p>
-                          </div>
-                          <span class="sm:hidden menu-item-price-mobile">15</span>
-                      </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/jalopeno_pizza.jpg" alt="Margherita Pizza">
-                          <div class="p-4">
-                              <div class="menu-item-header">
-                                  <h3>Margherita </h3>
-                                  <span class="hidden sm:inline menu-item-price">14</span>
+                                  <h3>Margherita</h3>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">14</span>
                               </div>
                               <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and basil</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">14</span>
                       </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Italian Sausage Pizza">
-                          <div class="p-4">
+                        <div class="menu-item">
+                        <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Italian Sausage Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
                                   <h3>Italian Sausage</h3>
-                                  <span class="hidden sm:inline menu-item-price">15</span>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">15</span>
                               </div>
                               <p class="text-zinc-700">san marzano tomato sauce, mozzarella, and italian sausage</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">15</span>
-                      </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Bianca Pizza">
-                          <div class="p-4">
+                        </div>
+                        <div class="menu-item">
+                          <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Bianca Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
-                                  <h3>Bianca </h3>
-                                  <span class="hidden sm:inline menu-item-price">15</span>
+                                  <h3>Bianca</h3>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">15</span>
                               </div>
                               <p class="text-zinc-700">olive oil, garlic, arugula, prosciutto ham, and mozzarella</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">15</span>
                       </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Basil Pizza">
-                          <div class="p-4">
+                        <div class="menu-item">
+                          <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Basil Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
-                                  <h3>Basil </h3>
-                                  <span class="hidden sm:inline menu-item-price">13</span>
+                                  <h3>Basil</h3>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">13</span>
                               </div>
                               <p class="text-zinc-700">san marzano tomato sauce, garlic, mozzarella, and basil</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">13</span>
                       </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Marinara Pizza">
-                          <div class="p-4">
+                        <div class="menu-item">
+                          <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Marinara Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
-                                  <h3>Marinara </h3>
-                                  <span class="hidden sm:inline menu-item-price">14</span>
+                                  <h3>Marinara</h3>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">14</span>
                               </div>
                               <p class="text-zinc-700">san marzano tomato sauce, garlic, oregano with cheese</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">14</span>
                       </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Fig & CaperPizza">
-                          <div class="p-4">
+                        <div class="menu-item">
+                          <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Fig & CaperPizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
                                   <h3>Fig & Caper</h3>
-                                  <span class="hidden sm:inline menu-item-price">20</span>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">20</span>
                               </div>
                               <p class="text-zinc-700">olive oil, garlic, mozzarella, mushrooms, hot sauce, figs, capers, prosciutto ham topped with arugula</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">20</span>
-                      </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Barbeque Pizza">
-                          <div class="p-4">
+                        </div>
+                        <div class="menu-item">
+                          <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="Barbeque Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
-                                  <h3>Barbeque </h3>
-                                  <span class="hidden sm:inline menu-item-price">20</span>
+                                  <h3>Barbeque</h3>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">20</span>
                               </div>
                               <p class="text-zinc-700">BBQ sauce, mozzarella, red onion, pineapple, cilantro, your choice of meat - italian sausage, pepperoni, prosciutto ham</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">20</span>
-                      </div>
-                      <div class="menu-item flex items-center">
-                      <img class="rounded max-w-24 md:max-w-32 h-48" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="PBR Pizza">
-                          <div class="p-4">
+                        </div>
+                        <div class="menu-item">
+                          <img class="mx-auto" loading="lazy" src="/assets/images/pizza_w_pinapple.jpg" alt="PBR Pizza">
+                          <div class="p-4 flex flex-col justify-evenly">
                               <div class="menu-item-header">
-                                  <h3>PBR </h3>
-                                  <span class="hidden sm:inline menu-item-price">20</span>
+                                  <h3>PBR</h3>
+                                  <div class="dotted_line"></div>
+                                  <span class="menu-item-price">20</span>
                               </div>
                               <p class="text-zinc-700">ranch base (made from scratch), pepperoni, cherrywood smoked bacon, wilted arugula, fresh sliced cherry tomatoes, fresh garlic, parmesean cheese</p>
                           </div>
-                          <span class="sm:hidden menu-item-price-mobile">20</span>
-                      </div>
-                  </div>
-              </div>
-
-                <div class="p-4 border-y-2 my-10">
-                  <h3 class="text-center text-2xl text-zinc-600"> Additional Pizza Toppings </h3>
-                  <div class="toppings md:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class=" text-center gap-4 p-4 col-span-2 md:col-span-1 ">
-                      <h4 class="text-2xl mb-4 font-bold"> 1.25 </h4>
-                      <ul class="flex gap-4 flex-wrap justify-center items-center">
-                        <li>onions</li>
-                        <li>oregano</li>
-                        <li>fresh garlic</li>
-                      </ul>
+                        </div>
                     </div>
-                    <div class="text-center gap-4 p-4">
-                      <h4 class="text-2xl mb-4 font-bold"> 2.00 </h4>
-                      <ul class="flex gap-4 flex-wrap justify-center items-center">
-                        <li>rell bell peppers</li>
-                        <li>jalapenos</li>
-                        <li>pepperoncinis</li>
-                        <li>green or black olives</li>
-                        <li>mushrooms</li>
-                        <li>pineapple</li>
-                        <li>arugula</li>
-                        <li>cherry tomatoes</li>
-                      </ul>
-                    </div>
-                    <div class="text-center  gap-4 p-4">
-                      <h4 class="text-2xl mb-4 font-bold"> 3.00 </h4>
-                      <ul class="flex gap-4 flex-wrap justify-center items-center">
-                        <li>basil</li>
-                        <li>figs</li>
-                        <li>pepperoni</li>
-                        <li>italian sausage</li>
-                        <li>anchovies</li>
-                        <li>cheese</li>
-                        <li>prosciutto ham</li>
-                        <li>bacon</li>
-                    </div>
-                  </div>
                 </div>
 
-                <div  class="rounded p-4">
-                  <h2 class="text-center text-4xl text-zinc-600 mt-4"> Drinks </h2>
-
-                  <!-- WINE -->
-                  <div class="wine my-8">
-                    <h3 class="w-48 mx-auto text-center text-2xl text-zinc-600 p-4"> Wine </h3>
-                    <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">BUCK SHACK CABERNET</h3>
-                        <p class="text-zinc-700">bold fruit flavors with cassis and plum, black pepper and a long spicy finish.</p>
-                        <span class="min-w-48 menu-item-price">bottle 60</span>
+                  <div class="p-4 border-y-2 my-10">
+                    <h3 class="text-center text-2xl text-zinc-600"> Additional Pizza Toppings</h3>
+                    <div class="toppings md:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+                      <div class=" text-center gap-4 p-4 col-span-2 md:col-span-1 ">
+                        <h4 class="text-2xl mb-4 font-bold"> 1.25 </h4>
+                        <ul class="flex gap-4 flex-wrap justify-center items-center">
+                          <li>onions</li>
+                          <li>oregano</li>
+                          <li>fresh garlic</li>
+                        </ul>
                       </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">THE CRUSHER MERLOT</h3>
-                        <p class="text-zinc-700">spicy dark fruit flavors with seamless finish</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                      <div class="text-center gap-4 p-4">
+                        <h4 class="text-2xl mb-4 font-bold"> 2.00 </h4>
+                        <ul class="flex gap-4 flex-wrap justify-center items-center">
+                          <li>rell bell peppers</li>
+                          <li>jalapenos</li>
+                          <li>pepperoncinis</li>
+                          <li>green or black olives</li>
+                          <li>mushrooms</li>
+                          <li>pineapple</li>
+                          <li>arugula</li>
+                          <li>cherry tomatoes</li>
+                        </ul>
                       </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">1919 MALBEC</h3>
-                        <p class="text-zinc-700">well-bodied, soft tannins, plum and ripe fruit aromas</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">BIG SMOOTH ZINFANDEL</h3>
-                        <p class="text-zinc-700">dark decadent with bold fruit flavors and smooth tannins</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">GRAN PASSIONE ITALIAN RED BLEND</h3>
-                        <p class="text-zinc-700">full bodied with rich red and black fruits</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">STELLA ROSA MOSCATO OR ROSSO</h3>
-                        <p class="text-zinc-700">red or white sweet sparkling wine</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">BIG SMOOTH CABERNET</h3>
-                        <p class="text-zinc-700">robust black cherry and toasty oak with smooth finish</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">SUN GARDEN REISLING</h3>
-                        <p class="text-zinc-700">tangy with a fruit sweet finish</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">FIT VINE PINOT NOIR</h3>
-                        <p class="text-zinc-700">toasted cedar with hints of orange</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">SEAN MINOR CHARDONNAY</h3>
-                        <p class="text-zinc-700">fruity, creamy, deliciously dry</p>
-                          <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
-                      </div>
-                      <div class=" md:ml-32">
-                        <h3 class="menu-item-header">TEXTBOOK CABERNET SAUVIGNON</h3>
-                        <p class="text-zinc-700">hand picked, hand sorted 16 month maturation in small french oak barrels</p>
-                        <span class="min-w-48 menu-item-price">bottle 60</span>
+                      <div class="text-center  gap-4 p-4">
+                        <h4 class="text-2xl mb-4 font-bold"> 3.00 </h4>
+                        <ul class="flex gap-4 flex-wrap justify-center items-center">
+                          <li>basil</li>
+                          <li>figs</li>
+                          <li>pepperoni</li>
+                          <li>italian sausage</li>
+                          <li>anchovies</li>
+                          <li>cheese</li>
+                          <li>prosciutto ham</li>
+                          <li>bacon</li>
                       </div>
                     </div>
-
-                      <!-- BEER -->
                   </div>
-              </div>
-            </section>
+
+                  <div  class="rounded p-4">
+                    <h2 class="text-center text-4xl text-zinc-600 mt-4"> Drinks </h2>
+
+                    <!-- WINE -->
+                    <div class="wine my-8">
+                      <h3 class="w-48 mx-auto text-center text-2xl text-zinc-600 p-4"> Wine </h3>
+                      <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">BUCK SHACK CABERNET</h3>
+                          <p class="text-zinc-700">bold fruit flavors with cassis and plum, black pepper and a long spicy finish.</p>
+                          <span class="min-w-48 menu-item-price">bottle 60</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">THE CRUSHER MERLOT</h3>
+                          <p class="text-zinc-700">spicy dark fruit flavors with seamless finish</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">1919 MALBEC</h3>
+                          <p class="text-zinc-700">well-bodied, soft tannins, plum and ripe fruit aromas</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">BIG SMOOTH ZINFANDEL</h3>
+                          <p class="text-zinc-700">dark decadent with bold fruit flavors and smooth tannins</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">GRAN PASSIONE ITALIAN RED BLEND</h3>
+                          <p class="text-zinc-700">full bodied with rich red and black fruits</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">STELLA ROSA MOSCATO OR ROSSO</h3>
+                          <p class="text-zinc-700">red or white sweet sparkling wine</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">BIG SMOOTH CABERNET</h3>
+                          <p class="text-zinc-700">robust black cherry and toasty oak with smooth finish</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">SUN GARDEN REISLING</h3>
+                          <p class="text-zinc-700">tangy with a fruit sweet finish</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">FIT VINE PINOT NOIR</h3>
+                          <p class="text-zinc-700">toasted cedar with hints of orange</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">SEAN MINOR CHARDONNAY</h3>
+                          <p class="text-zinc-700">fruity, creamy, deliciously dry</p>
+                            <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
+                        </div>
+                        <div class=" md:ml-32">
+                          <h3 class="menu-item-header">TEXTBOOK CABERNET SAUVIGNON</h3>
+                          <p class="text-zinc-700">hand picked, hand sorted 16 month maturation in small french oak barrels</p>
+                          <span class="min-w-48 menu-item-price">bottle 60</span>
+                        </div>
+                      </div>
+
+                        <!-- BEER -->
+                    </div>
+                </div>
+              </section>
+            </div>
             <br class="">
             <!-- Contact -->
             <section id="contact" class="container mx-auto mt-12">
