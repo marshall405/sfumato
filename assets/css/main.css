@@ -199,7 +199,7 @@ img.img-drop-shadow {
 }
 .menu-item {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .menu-item img {
@@ -209,6 +209,12 @@ img.img-drop-shadow {
 @media (min-width: 640px) {
   .menu-item img {
     max-width: 120px;
+  }
+
+  .dotted_line {
+    flex-grow: 1;
+    border-bottom: 5px dotted #bc1a1f;
+    margin: 10px 0;
   }
 }
 
@@ -228,12 +234,7 @@ img.img-drop-shadow {
   color: #737070;
 } 
 
-.dotted_line {
-  /* width: 100%; */
-  flex-grow: 1;
-  border-bottom: 5px dotted #bc1a1f;
-  margin: 10px 0;
-}
+
 .menu-item-price-mobile {
   font-size: 1.5em;
   border-left: 2px solid rgb(0, 0, 0);
