@@ -8,11 +8,11 @@
 /* Your custom styles here */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 190px; /* header height */
+  /* scroll-padding-top: 120px; header height */
 }
 
 /* Applying Playfair Display to headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -73,7 +73,7 @@ header,nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .bg-home {
@@ -239,27 +239,21 @@ img.img-drop-shadow {
 /* Hours */
 
 .hours-wrapper {
-  background-image: url('/assets/images/sfumato_rest.jpg');
+  /* background-image: url('/assets/images/sfumato_rest.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
+  background-repeat: no-repeat; */
+  border-radius: 5px;
 }
 .hours-wrapper > div {
   padding: 20px;
-  background: rgba(64, 62, 62, 0.8);
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .hour-item {
-  padding: 20px;
-  color: #1e1d1d;
-  background: rgba(255,255,255, 0.49);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(64, 62, 62, 0.29);
+  width: 160px;
+  padding: 10px;
+  color: #171717;
   font-size: 1.4em;
 }
 
@@ -393,7 +387,11 @@ img.img-drop-shadow {
   padding: 15px;
  
 }
-
+/* Beer */
+.custom-bg-green {
+  background-color: #254328;
+  color: #e1ceac;
+}
 
 
 /* Utiliies */

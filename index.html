@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-pt-32 md:scroll-pt-36	">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -921,7 +921,7 @@
         </div>
 
         <!-- Hero -->
-        <div class="hero bg-home w-full bg-center bg-cover relative z-10">
+        <div class="hero bg-home w-full md:h-screen	bg-center bg-cover relative z-10">
             <div class="flex items-end justify-start w-full h-full bg-black/75"> 
                 <div class="text-zinc-100 text-center hero-wrapper text-xl md:text-2xl p-4 fade-in">
                   <a href="/#menu">View our menu <i class="fas fa-arrow-down"></i></a>
@@ -941,13 +941,15 @@
             </section>
 
             <!-- Menu -->
-            <div class="fade-in-timeline">
+            <section id="menu" class="fade-in-timeline">
               <div class="flex justify-center relative min-h-16	">
                 <img class="rounded w-64 h-64 absolute" loading="lazy" src="/assets/images/menu_icon.svg" alt="Menu Icon">
               </div>
-              <section id="menu"class="bg-zinc-50 container mx-auto border-solid border border-zinc-200 relative">
+              <div class="bg-zinc-50 container mx-auto border-solid border border-zinc-200 relative">
                 <h2 class="text-4xl font-bold text-zinc-700 uppercase text-center m-4">Menu</h2>    
-                <div  class="rounded p-4">
+
+                <!-- Pizzas -->
+                <div class="rounded p-4">
                     <h2 class="text-center text-4xl text-zinc-600 mt-4"> Neapolitan Pizzas </h2>
                     <p class="text-center text-zinc-500 mb-8">one size | 12" thin crust </p>
                     <div class="menu-wrapper grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -1053,103 +1055,105 @@
                     </div>
                 </div>
 
-                  <div class="p-4 border-y-2 my-10">
-                    <h3 class="text-center text-2xl text-zinc-600"> Additional Pizza Toppings</h3>
-                    <div class="toppings md:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
-                      <div class=" text-center gap-4 p-4 col-span-2 md:col-span-1 ">
-                        <h4 class="text-2xl mb-4 font-bold"> 1.25 </h4>
-                        <ul class="flex gap-4 flex-wrap justify-center items-center">
-                          <li>onions</li>
-                          <li>oregano</li>
-                          <li>fresh garlic</li>
-                        </ul>
-                      </div>
-                      <div class="text-center gap-4 p-4">
-                        <h4 class="text-2xl mb-4 font-bold"> 2.00 </h4>
-                        <ul class="flex gap-4 flex-wrap justify-center items-center">
-                          <li>rell bell peppers</li>
-                          <li>jalapenos</li>
-                          <li>pepperoncinis</li>
-                          <li>green or black olives</li>
-                          <li>mushrooms</li>
-                          <li>pineapple</li>
-                          <li>arugula</li>
-                          <li>cherry tomatoes</li>
-                        </ul>
-                      </div>
-                      <div class="text-center  gap-4 p-4">
-                        <h4 class="text-2xl mb-4 font-bold"> 3.00 </h4>
-                        <ul class="flex gap-4 flex-wrap justify-center items-center">
-                          <li>basil</li>
-                          <li>figs</li>
-                          <li>pepperoni</li>
-                          <li>italian sausage</li>
-                          <li>anchovies</li>
-                          <li>cheese</li>
-                          <li>prosciutto ham</li>
-                          <li>bacon</li>
-                      </div>
+                <!-- Additional Toppings -->
+                <div class="p-4 border-y-2 my-10">
+                  <h3 class="text-center text-2xl text-zinc-600"> Additional Pizza Toppings</h3>
+                  <div class="toppings md:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class=" text-center gap-4 p-4 col-span-2 md:col-span-1 ">
+                      <h4 class="text-2xl mb-4 font-bold"> 1.25 </h4>
+                      <ul class="flex gap-4 flex-wrap justify-center items-center">
+                        <li>onions</li>
+                        <li>oregano</li>
+                        <li>fresh garlic</li>
+                      </ul>
+                    </div>
+                    <div class="text-center gap-4 p-4">
+                      <h4 class="text-2xl mb-4 font-bold"> 2.00 </h4>
+                      <ul class="flex gap-4 flex-wrap justify-center items-center">
+                        <li>rell bell peppers</li>
+                        <li>jalapenos</li>
+                        <li>pepperoncinis</li>
+                        <li>green or black olives</li>
+                        <li>mushrooms</li>
+                        <li>pineapple</li>
+                        <li>arugula</li>
+                        <li>cherry tomatoes</li>
+                      </ul>
+                    </div>
+                    <div class="text-center  gap-4 p-4">
+                      <h4 class="text-2xl mb-4 font-bold"> 3.00 </h4>
+                      <ul class="flex gap-4 flex-wrap justify-center items-center">
+                        <li>basil</li>
+                        <li>figs</li>
+                        <li>pepperoni</li>
+                        <li>italian sausage</li>
+                        <li>anchovies</li>
+                        <li>cheese</li>
+                        <li>prosciutto ham</li>
+                        <li>bacon</li>
                     </div>
                   </div>
+                </div>
 
-                  <div  class="rounded p-4">
+                <!-- Drinks -->
+                <div  class="rounded p-4">
                     <h2 class="text-center text-4xl text-zinc-600 mt-4"> Drinks </h2>
 
                     <!-- WINE -->
                     <div class="wine my-8">
-                      <h3 class="w-48 mx-auto text-center text-2xl text-zinc-600 p-4"> Wine </h3>
-                      <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
-                        <div class=" md:ml-32">
+                      <h3 class="w-full md:w-8/12 mx-auto text-center text-3xl text-zinc-600 border-b-4 mb-4 font-semibold uppercase tracking-widest">WINE </h3>
+                      <div class="grid grid-cols-1  md:grid-cols-2 gap-4">
+                        <div class="">
                           <h3 class="menu-item-header">BUCK SHACK CABERNET</h3>
                           <p class="text-zinc-700">bold fruit flavors with cassis and plum, black pepper and a long spicy finish.</p>
                           <span class="min-w-48 menu-item-price">bottle 60</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">THE CRUSHER MERLOT</h3>
                           <p class="text-zinc-700">spicy dark fruit flavors with seamless finish</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">1919 MALBEC</h3>
                           <p class="text-zinc-700">well-bodied, soft tannins, plum and ripe fruit aromas</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">BIG SMOOTH ZINFANDEL</h3>
                           <p class="text-zinc-700">dark decadent with bold fruit flavors and smooth tannins</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">GRAN PASSIONE ITALIAN RED BLEND</h3>
                           <p class="text-zinc-700">full bodied with rich red and black fruits</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">STELLA ROSA MOSCATO OR ROSSO</h3>
                           <p class="text-zinc-700">red or white sweet sparkling wine</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">BIG SMOOTH CABERNET</h3>
                           <p class="text-zinc-700">robust black cherry and toasty oak with smooth finish</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">SUN GARDEN REISLING</h3>
                           <p class="text-zinc-700">tangy with a fruit sweet finish</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">FIT VINE PINOT NOIR</h3>
                           <p class="text-zinc-700">toasted cedar with hints of orange</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">SEAN MINOR CHARDONNAY</h3>
                           <p class="text-zinc-700">fruity, creamy, deliciously dry</p>
                             <span class="min-w-48 menu-item-price">glass 8 | bottle 40</span>
                         </div>
-                        <div class=" md:ml-32">
+                        <div class="">
                           <h3 class="menu-item-header">TEXTBOOK CABERNET SAUVIGNON</h3>
                           <p class="text-zinc-700">hand picked, hand sorted 16 month maturation in small french oak barrels</p>
                           <span class="min-w-48 menu-item-price">bottle 60</span>
@@ -1158,19 +1162,69 @@
 
                         <!-- BEER -->
                     </div>
-                </div>
-              </section>
-            </div>
+
+                    <!-- BEER -->
+                    <div class="beer my-8">
+                      <h3 class="w-full md:w-8/12 mx-auto text-center text-3xl text-zinc-600 border-b-4 mb-4 font-semibold uppercase tracking-widest">Beers</h3>
+                      <p class="text-center text-2xl text-zinc-400 mb-2 uppercase"> Ask about our rotating draft beers</p>
+                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center">
+                        <div class="custom-bg-green rounded text-zinc-50 p-4 text-lg">
+                          <h4 class="text-center text-2xl text-zinc-300 uppercase font-semibold"> Premium Bottles</h4>
+                          <ul> 
+                            <li>dragons milk | 7</li>
+                            <li>vanilla porter | 7</li>
+                            <li>sam smith organic chocolate stout | 7</li>
+                            <li>sam smith oatmeal stout | 7</li>
+                            <li>spaten | 7</li>
+                          </ul>
+                        </div>
+                       <div class="custom-bg-green rounded text-zinc-50 p-4 text-lg">
+                          <h4 class="text-center text-2xl text-zinc-300 uppercase font-semibold"> Speciality Bottles</h4>
+                          <ul> 
+                            <li>fat tire | 6</li>
+                            <li>ranger | 6</li>
+                            <li>sam adams lager | 6</li>
+                            <li>stella artois | 6</li>
+                            <li>shiner bock | 6</li>
+                            <li>blue moon | 6</li>
+                            <li>stella cidre | 6</li>
+                            <li>cider | 6</li>
+                          </ul>
+                        </div>
+                       <div class="custom-bg-green rounded text-zinc-50 p-4 text-lg">
+                          <h4 class="text-center text-2xl text-zinc-300 uppercase font-semibold"> Domestic Bottles</h4>
+                          <ul> 
+                            <li>budweiser | 5.50</li>
+                            <li>bud light | 5.50</li>
+                            <li>coors original | 5.50</li>
+                            <li>coors light | 5.50</li>
+                            <li>busch light | 5.50</li>
+                            <li>michelob ultra light | 5.50</li>
+                            <li>michelob ultra light gold | 5.50</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- COCKTAILS -->
+                    <div class="my-8">
+                      <h3 class="w-full md:w-8/12 mx-auto text-center text-3xl text-zinc-600 border-b-4 mb-4 font-semibold uppercase tracking-widest">Cocktails</h3>
+                      <p class="text-center text-2xl text-zinc-400 mb-2 uppercase"> Ask about our cocktail specials</p>
+                      <p class=" text-2xl text-zinc-600 uppercase font-semibold text-center"> Speciality Cocktails 9</p>
+                      </div>
+                    </div>
+              </div>
+            </section>
             <br class="">
             <!-- Contact -->
-            <section id="contact" class="container mx-auto mt-12">
-                <h2 class="text-4xl font-bold mb-4 text-zinc-700 uppercase text-center">Find Us</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+            <section id="contact" class="bg-zinc-950 text-zinc-50 container mx-auto mt-12">
+                <h2 class="text-4xl font-bold p-8 uppercase text-center">Find Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-14 px-8">
                     <div class="flex flex-col justify-center items-center pt-8">
-                        <p class="text-zinc-400 text-2xl lg:text-3xl tracking-wide leading-snug text-center">
+                        <p class="text-2xl lg:text-3xl tracking-wide leading-snug text-center">
                             Located in the heart of Carnes, Sfumato Pizzeria is the perfect place to enjoy a delicious pizza with friends and family.
                         </p>
-                        <p class="text-zinc-700 font-bold text-2xl lg:text-3xl tracking-wide leading-snug text-center mt-12 uppercase">
+                        <p class="text-zinc-200 font-bold text-2xl lg:text-3xl tracking-wide leading-snug text-center mt-12 uppercase">
                             4995 Carnes Dr. <br> Alton, IA 51003
                         </p>
                     </div>
@@ -1186,7 +1240,7 @@
                         </iframe>
                     </div>
                 </div>
-                <div class="container mx-auto my-10 bg-zinc-50 rounded p-3.5">
+                <div class="container mx-auto my-10 bg-zinc-50 p-3.5">
                     <div  class="text-center text-2xl md:text-4xl text-zinc-400">
                         <p class="p-4">Have an event you'd like us to host, reach out! </p>
                     </div>
@@ -1218,28 +1272,28 @@
 
                     
                         <div class="flex flex-row flex-wrap gap-4 my-4">
-                            <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div class="hour-item flex flex-col gap-2 grow content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
                                 <div>
                                     <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i>
                                 </div>
                                 <h3 class="md:text-xl"> Thursday </h3>
                                 <p>5 PM - 9 PM</p>
                             </div>
-                            <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div class="hour-item flex flex-col gap-2 grow content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
                                 <div>
                                     <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i> 
                                 </div>
                                 <h3 class="md:text-xl"> Friday </h3>
                                 <p>5 PM - 9 PM</p>
                             </div>  
-                            <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div class="hour-item flex flex-col gap-2 grow content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
                                 <div>
                                     <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i> 
                                 </div>
                                 <h3 class="md:text-xl"> Saturday </h3>
                                 <p>5 PM - 9 PM</p>
                                 </div>
-                            <div class="hour-item flex flex-col gap-2 grow rounded-lg content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
+                            <div class="hour-item flex flex-col gap-2 grow content-center justify-items-center text-center min-w-24 px-2 py-2 text-zinc-50">
                                 <div>
                                     <i class="inline-block fa fa-clock md:text-4xl" aria-hidden="true"></i> 
                                 </div>
