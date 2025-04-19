@@ -608,10 +608,6 @@ video {
   left: 1rem;
 }
 
-.right-4 {
-  right: 1rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -626,6 +622,10 @@ video {
 
 .z-20 {
   z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .col-span-2 {
@@ -776,6 +776,10 @@ video {
   max-width: 56rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -860,6 +864,10 @@ video {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -883,6 +891,10 @@ video {
 
 .border-b-4 {
   border-bottom-width: 4px;
+}
+
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
 }
 
 .border-solid {
@@ -917,6 +929,11 @@ video {
   background-color: rgb(250 250 250 / 0.9);
 }
 
+.bg-zinc-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+}
+
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
@@ -937,6 +954,10 @@ video {
 
 .p-0 {
   padding: 0px;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-2 {
@@ -983,6 +1004,11 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-12 {
@@ -1091,6 +1117,12 @@ video {
   color: rgb(63 63 70 / var(--tw-text-opacity));
 }
 
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 /* Your custom styles here */
 
 html {
@@ -1113,10 +1145,6 @@ main {
   z-index: 1;
 }
 
-main > section {
-  margin-top:15px;
-}
-
 /* Applying Roboto to body text */
 
 body {
@@ -1135,7 +1163,6 @@ body {
 
 .cls-40 {
   font-size: 1.2em;
-  fill: #fff;
 }
 
 .white-background .cls-40,
@@ -1160,9 +1187,6 @@ header,nav {
 /* Hero */
 
 .hero {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 80vh;
 }
 
@@ -1206,8 +1230,8 @@ header,nav {
 }
 
 .mobile-nav-toggle {
-  top: 20px;
-  left: 40px;
+  height: 17px;
+  width: 22px;
 }
 
 .mobile-nav-toggle .top-bar, .mobile-nav-toggle .middle-bar, .mobile-nav-toggle .bottom-bar {
@@ -1220,17 +1244,17 @@ header,nav {
   right: 0;
 }
 
-body.overflow-hidden header .mobile-nav-toggle .top-bar {
+body.overflow-hidden .mobile-nav-toggle .top-bar {
   transform: rotate(45deg);
   top: 7px;
 }
 
-body.overflow-hidden header .mobile-nav-toggle .bottom-bar {
+body.overflow-hidden .mobile-nav-toggle .bottom-bar {
   transform: rotate(-45deg);
   top: 7px;
 }
 
-body.overflow-hidden header .mobile-nav-toggle .middle-bar {
+body.overflow-hidden .mobile-nav-toggle .middle-bar {
   opacity: 0;
 }
 
@@ -1477,7 +1501,7 @@ img.img-drop-shadow {
 /* WINE */
 
 .wine {
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 /* Beer */
@@ -1520,12 +1544,12 @@ img.img-drop-shadow {
     grid-column: span 3 / span 3;
   }
 
-  .md\:inline {
-    display: inline;
+  .md\:block {
+    display: block;
   }
 
-  .md\:flex {
-    display: flex;
+  .md\:inline {
+    display: inline;
   }
 
   .md\:hidden {
@@ -1536,12 +1560,8 @@ img.img-drop-shadow {
     height: 100vh;
   }
 
-  .md\:w-4\/5 {
-    width: 80%;
-  }
-
-  .md\:w-64 {
-    width: 16rem;
+  .md\:w-48 {
+    width: 12rem;
   }
 
   .md\:w-8\/12 {
