@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery • Sfumato Pizzeria</title>
+  <meta name="description" content="Photos from Sfumato Pizzeria — wood-fired pizzas, the oven, and the space." />
+  <link rel="stylesheet" href="/assets/css/output.css" />
+  <script src="https://kit.fontawesome.com/b8cf95d72b.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-zinc-50 text-zinc-900 antialiased">
+  <!-- Header (reuse your same header markup if you want) -->
+  <header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+      <a href="/" class="flex items-baseline gap-2" aria-label="Sfumato Pizzeria home">
+        <span class="font-['Playfair_Display'] text-2xl font-bold tracking-tight">Sfumato</span>
+        <span class="hidden text-sm font-medium tracking-wide text-zinc-500 sm:inline">Pizzeria</span>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm font-medium text-zinc-700 md:flex" aria-label="Primary">
+        <a class="hover:text-zinc-900" href="/#menu">Menu</a>
+        <a class="hover:text-zinc-900" href="/#drinks">Drinks</a>
+        <a class="hover:text-zinc-900" href="/#find-us">Find us</a>
+        <a class="hover:text-zinc-900" href="/#hours">Hours</a>
+        <a class="text-zinc-900" href="/gallery.html" aria-current="page">Gallery</a>
+      </nav>
+
+      <a href="tel:712-373-3007" class="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800">
+        Call 712-373-3007
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-10 md:px-6">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h1 class="font-['Playfair_Display'] text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">Gallery</h1>
+        <p class="mt-2 text-zinc-600">A peek inside the oven and what’s coming out of it.</p>
+      </div>
+
+      <a href="/#menu" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800">
+        View menu <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- Option A: Clean uniform grid (recommended) -->
+    <section class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Card -->
+      <figure class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="h-[300px] overflow-hidden">
+          <img src="/assets/images/pizza_w_pinapple.jpg"
+               alt="Close-up of a pizza with pineapple"
+               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+
+      <!-- Repeat for your 8–10 photos -->
+      <figure class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="h-[300px] overflow-hidden">
+          <img src="/assets/images/pizza_one.png"
+               alt="Close-up of a Margherita pizza"
+               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+
+      <figure class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="h-[300px] overflow-hidden">
+          <img src="/assets/images/sfumato_oven_2.png"
+               alt="Pizzas baking in the wood-fired oven"
+               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+
+      <figure class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="h-[300px] overflow-hidden">
+          <img src="/assets/images/sfumato_drink.jpg"
+               alt="A refreshing drink at Sfumato Pizzeria"
+               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+
+      <figure class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="h-[300px] overflow-hidden">
+          <img src="/assets/images/sfumato_rest.jpg"
+               alt="Exterior view of Sfumato Pizzeria"
+               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+
+      <figure class="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="h-[300px] overflow-hidden">
+          <img src="/assets/images/the_team.jpg"
+               alt="The team at Sfumato Pizzeria"
+               class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+      <!-- ...add the rest -->
+    </section>
+
+  </main>
+
+  <footer class="border-t border-zinc-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+      <p class="text-sm text-zinc-500">© <script>document.write(new Date().getFullYear());</script> Sfumato Pizzeria. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
