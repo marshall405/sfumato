@@ -1639,3 +1639,10 @@ img.img-drop-shadow {
     line-height: 2.25rem;
   }
 }
+
+
+.highlight {
+  background-color: rgb(246 230 207);
+  font-weight: bold;
+  border-radius: 5px;
+}
