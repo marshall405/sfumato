@@ -70,7 +70,20 @@ header,nav {
 
 .bg-home {
   background-image: url('/assets/images/sfumato_oven.jpg');
+  transition: background-image .5s ease-in-out;
+  animation: bgChange 10s ease-in-out infinite alternate;
 }
+
+@keyframes bgChange {
+  from {
+    background-image: url('/assets/images/sfumato_oven.jpg');
+  }
+  to {
+    background-image: url('/assets/images/hero_fire_2.jpeg');
+  }
+}
+
+
 .contact {
   background-image: url('/assets/images/sfumato_rest.jpg');
 }
@@ -227,6 +240,16 @@ img.img-drop-shadow {
   display: flex;
   align-items: center;
 } 
+
+/* Gallery */
+/* make it so when hovering over an image, it zooms in without affecting the layout */
+.gallery img {
+  aspect-ratio: 9/16;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
 
 /* Hours */
 
