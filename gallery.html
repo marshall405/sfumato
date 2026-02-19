@@ -7,10 +7,12 @@
   <meta name="description" content="Photos from Sfumato Pizzeria — wood-fired pizzas, the oven, and the space." />
   <link rel="stylesheet" href="/assets/css/output.css" />
   <script src="https://kit.fontawesome.com/b8cf95d72b.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/mobileNavToggles.js" defer></script>
+
 </head>
 
 <body class="bg-zinc-50 text-zinc-900 antialiased">
-  <!-- Header (reuse your same header markup if you want) -->
+    <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
       <a href="/" class="flex items-baseline gap-2" aria-label="Sfumato Pizzeria home">
@@ -19,16 +21,53 @@
       </a>
 
       <nav class="hidden items-center gap-6 text-sm font-medium text-zinc-700 md:flex" aria-label="Primary">
-        <a class="hover:text-zinc-900" href="/#menu">Menu</a>
+        <a class="hover:text-zinc-900" href="/">Home</a>
+        <a class="hover:text-zinc-900" href="/menu.html" >Menu</a>
         <a class="hover:text-zinc-900" href="/#drinks">Drinks</a>
+        <a class="aria-[current=page]:text-zinc-900 aria-[current=page]:font-semibold hover:text-zinc-900" href="/gallery.html" aria-current="page">Gallery</a>
         <a class="hover:text-zinc-900" href="/#find-us">Find us</a>
         <a class="hover:text-zinc-900" href="/#hours">Hours</a>
-        <a class="text-zinc-900" href="/gallery.html" aria-current="page">Gallery</a>
       </nav>
 
-      <a href="tel:712-373-3007" class="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800">
-        Call 712-373-3007
-      </a>
+      <div class="flex items-center gap-3">
+        <nav class="hidden items-center gap-3 sm:flex" aria-label="Social">
+          <a class="rounded-md p-2 hover:bg-zinc-100" href="https://www.facebook.com/profile.php?id=100037636219284" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img loading="lazy" alt="" width="18" height="18" src="/assets/images/Facebook_Logo_Primary.png" />
+          </a>
+          <a class="rounded-md p-2 hover:bg-zinc-100" href="https://www.instagram.com/sfumatopizzeria/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img loading="lazy" alt="" width="18" height="18" src="/assets/images/Instagram_Glyph_Gradient.png" />
+          </a>
+        </nav>
+
+        <a href="tel:712-373-3007" class="hidden rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800 md:inline-flex">
+          Call 712-373-3007
+        </a>
+
+        <button id="mobileNavToggle"
+                class="inline-flex items-center justify-center rounded-lg p-2 text-zinc-700 hover:bg-zinc-100 md:hidden"
+                aria-controls="mobileNav"
+                aria-expanded="false"
+                aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileNav" class="hidden md:hidden">
+      <div class="border-t border-zinc-200 bg-white">
+        <nav class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-base font-semibold text-zinc-800" aria-label="Mobile">
+          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/">Home</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/menu.html">Menu</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#drinks">Drinks</a>
+          <a class="text-zinc-900" href="/gallery.html" aria-current="page">Gallery</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#find-us">Find us</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#hours">Hours</a>
+          <a class="mt-2 inline-flex items-center justify-center rounded-lg bg-zinc-900 px-4 py-3 text-white" href="tel:712-373-3007">
+            Call 712-373-3007
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -39,7 +78,7 @@
         <p class="mt-2 text-zinc-600">A peek inside the oven and what’s coming out of it.</p>
       </div>
 
-      <a href="/#menu" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800">
+      <a href="menu.html" class="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800">
         View menu <i class="fas fa-arrow-right" aria-hidden="true"></i>
       </a>
     </div>
@@ -107,7 +146,13 @@
   </main>
 
   <footer class="border-t border-zinc-200 bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-6">
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-zinc-700">
+        <a class="hover:text-zinc-900" href="#menu">Menu</a>
+        <a class="hover:text-zinc-900" href="#drinks">Drinks</a>
+        <a class="hover:text-zinc-900" href="#find-us">Find us</a>
+        <a class="hover:text-zinc-900" href="#hours">Hours</a>
+      </div>
       <p class="text-sm text-zinc-500">© <script>document.write(new Date().getFullYear());</script> Sfumato Pizzeria. All rights reserved.</p>
     </div>
   </footer>
