@@ -70,96 +70,121 @@
     </div>
   </header>
 
-    <main class="mx-auto max-w-6xl px-4 pb-20 pt-10 md:px-6">
-
+    <main id="top" class="mx-auto max-w-6xl px-4 pb-20 pt-10 md:px-6">
     <!-- Page header -->
-    <header class="mb-10">
-      <h1 class="font-['Playfair_Display'] text-4xl font-bold tracking-tight md:text-5xl">
-        Menu
-      </h1>
+    <header>
+      <h1 class="font-['Playfair_Display'] text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">Menu</h1>
       <p class="mt-2 max-w-2xl text-zinc-600">
-        Wood-fired Neapolitan pizzas, baked hot and fast. One size • 12″ thin crust.
+        Wood-fired Neapolitan pizzas. Ask your server for current drink selections and seasonal specials.
       </p>
+
+      <!-- Light banner (doesn't feel heavy) -->
+      <div class="mt-6 overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm">
+        <div class="relative">
+            <img
+            src="/assets/images/sfumato_oven_2.png"
+            alt=""
+            class="h-32 w-full object-cover object-[center_40%] md:h-36"
+            loading="lazy"
+            decoding="async"
+            />
+            <div class="absolute inset-0 bg-black/25"></div>
+            <div class="absolute inset-0 flex items-end">
+            <div class="p-4">
+                <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/15">
+                <i class="fas fa-fire" aria-hidden="true"></i>
+                Wood-fired Neapolitan
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
     </header>
 
     <!-- Pizzas -->
-    <section>
-      <h2 class="text-2xl font-semibold">Neapolitan Pizzas</h2>
-
-      <div class="mt-5 grid gap-5 md:grid-cols-2">
-        <!-- Pizza item -->
-        <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Margherita</h3>
-            <span class="text-lg font-semibold">$14</span>
-          </div>
-          <p class="mt-2 text-sm text-zinc-600">
-            San Marzano tomato sauce, mozzarella, basil.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Pepperoni</h3>
-            <span class="text-lg font-semibold">$15</span>
-          </div>
-          <p class="mt-2 text-sm text-zinc-600">
-            San Marzano tomato sauce, mozzarella, pepperoni.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Italian Sausage</h3>
-            <span class="text-lg font-semibold">$15</span>
-          </div>
-          <p class="mt-2 text-sm text-zinc-600">
-            San Marzano tomato sauce, mozzarella, Italian sausage.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Bianca</h3>
-            <span class="text-lg font-semibold">$15</span>
-          </div>
-          <p class="mt-2 text-sm text-zinc-600">
-            Olive oil, garlic, mozzarella, arugula, prosciutto ham.
-          </p>
-        </article>
+    <section class="mt-12">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Neapolitan Pizzas</h2>
+          <p class="mt-1 text-sm text-zinc-600">One size • 12″ thin crust</p>
+        </div>
+        <a href="#addons" class="text-sm font-semibold text-zinc-900 hover:underline">Add-ons →</a>
       </div>
 
-      <!-- Soft pricing note -->
+      <!-- Tight typography + subtle dividers + aligned prices -->
+      <div class="mt-5 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="divide-y divide-zinc-200">
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Margherita</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$14</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">San Marzano tomato sauce, mozzarella, basil.</p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Pepperoni</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$15</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">San Marzano tomato sauce, mozzarella, pepperoni.</p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Italian Sausage</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$15</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">San Marzano tomato sauce, mozzarella, Italian sausage.</p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Bianca</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$15</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">Olive oil, garlic, mozzarella, arugula, prosciutto ham.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Softer + standout note -->
       <div class="mt-6 flex items-start gap-3 rounded-2xl bg-zinc-100 p-4 text-sm text-zinc-700">
         <i class="fas fa-leaf mt-0.5" aria-hidden="true"></i>
-        <span>Pricing may vary based on seasonal ingredients.</span>
+        <span>Pricing may vary slightly based on seasonal ingredients.</span>
       </div>
     </section>
 
     <!-- Additional toppings -->
-    <section class="mt-14">
-      <h2 class="text-2xl font-semibold">Additional Toppings</h2>
-      <p class="mt-1 text-sm text-zinc-600">Prices per pizza.</p>
+    <section class="mt-14" id="addons">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Additional Toppings</h2>
+          <p class="mt-1 text-sm text-zinc-600">Prices per pizza.</p>
+        </div>
+      </div>
 
       <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- $1.25 -->
         <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <span class="mb-3 inline-block rounded-full bg-zinc-900 px-3 py-1 text-sm font-semibold text-white">
-            $1.25
-          </span>
-          <ul class="mt-3 flex flex-wrap gap-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold tracking-wide text-zinc-500">Add-ons</span>
+            <span class="rounded-full bg-zinc-900 px-3 py-1 text-sm font-semibold text-white tabular-nums">$1.25</span>
+          </div>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
             <li class="rounded-full bg-zinc-100 px-3 py-1">Onions</li>
             <li class="rounded-full bg-zinc-100 px-3 py-1">Oregano</li>
             <li class="rounded-full bg-zinc-100 px-3 py-1">Fresh garlic</li>
           </ul>
         </div>
 
-        <!-- $2.00 -->
         <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <span class="mb-3 inline-block rounded-full bg-zinc-900 px-3 py-1 text-sm font-semibold text-white">
-            $2.00
-          </span>
-          <ul class="mt-3 flex flex-wrap gap-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold tracking-wide text-zinc-500">Add-ons</span>
+            <span class="rounded-full bg-zinc-900 px-3 py-1 text-sm font-semibold text-white tabular-nums">$2.00</span>
+          </div>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
             <li class="rounded-full bg-zinc-100 px-3 py-1">Red bell peppers</li>
             <li class="rounded-full bg-zinc-100 px-3 py-1">Jalapeños</li>
             <li class="rounded-full bg-zinc-100 px-3 py-1">Pepperoncinis</li>
@@ -171,12 +196,12 @@
           </ul>
         </div>
 
-        <!-- $3.00 -->
         <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-          <span class="mb-3 inline-block rounded-full bg-zinc-900 px-3 py-1 text-sm font-semibold text-white">
-            $3.00
-          </span>
-          <ul class="mt-3 flex flex-wrap gap-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold tracking-wide text-zinc-500">Add-ons</span>
+            <span class="rounded-full bg-zinc-900 px-3 py-1 text-sm font-semibold text-white tabular-nums">$3.00</span>
+          </div>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
             <li class="rounded-full bg-zinc-100 px-3 py-1">Basil</li>
             <li class="rounded-full bg-zinc-100 px-3 py-1">Figs</li>
             <li class="rounded-full bg-zinc-100 px-3 py-1">Pepperoni</li>
@@ -188,87 +213,66 @@
           </ul>
         </div>
       </div>
+      
     </section>
 
-    <!-- Drinks -->
-  <section class="mt-14">
-    <h2 class="text-2xl font-semibold">Drinks</h2>
-    <p class="mt-1 text-sm text-zinc-600">
-        Selections rotate — ask your server for what’s currently available.
-    </p>
+    <!-- Drinks (expanded + icons) -->
+    <section class="mt-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Drinks</h2>
+      <p class="mt-1 text-sm text-zinc-600">Selections rotate — ask your server for what’s currently available.</p>
 
-    <div class="mt-6 grid gap-6 md:grid-cols-3">
-        <!-- Beer -->
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
         <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
             <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
-            <i class="fas fa-beer text-zinc-700" aria-hidden="true"></i>
+              <i class="fas fa-beer text-zinc-700" aria-hidden="true"></i>
             </span>
             <h3 class="text-lg font-semibold">Beer</h3>
-        </div>
-
-        <p class="mt-3 text-sm text-zinc-600">
-            A rotating mix of local favorites and classic styles.
-        </p>
-
-        <ul class="mt-4 space-y-2 text-sm text-zinc-700">
+          </div>
+          <p class="mt-3 text-sm text-zinc-600">A rotating mix of local favorites and classic styles.</p>
+          <ul class="mt-4 space-y-2 text-sm text-zinc-700">
             <li>• Craft & local selections</li>
             <li>• Light & crisp options</li>
             <li>• Hoppy & seasonal brews</li>
-        </ul>
+          </ul>
         </div>
 
-        <!-- Wine -->
         <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
             <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
-            <i class="fas fa-wine-glass-alt text-zinc-700" aria-hidden="true"></i>
+              <i class="fas fa-wine-glass-alt text-zinc-700" aria-hidden="true"></i>
             </span>
             <h3 class="text-lg font-semibold">Wine</h3>
-        </div>
-
-        <p class="mt-3 text-sm text-zinc-600">
-            Curated wines chosen to pair well with wood-fired pizza.
-        </p>
-
-        <ul class="mt-4 space-y-2 text-sm text-zinc-700">
+          </div>
+          <p class="mt-3 text-sm text-zinc-600">Curated wines chosen to pair well with wood-fired pizza.</p>
+          <ul class="mt-4 space-y-2 text-sm text-zinc-700">
             <li>• Italian reds & whites</li>
             <li>• Light, pizza-friendly varietals</li>
             <li>• Rotating bottles & pours</li>
-        </ul>
+          </ul>
         </div>
 
-        <!-- Non-alcoholic -->
         <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <div class="flex items-center gap-3">
-                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
-                <i class="fas fa-glass-whiskey text-zinc-700" aria-hidden="true"></i>
-                </span>
-                <h3 class="text-lg font-semibold">Non-Alcoholic</h3>
-            </div>
-
-            <p class="mt-3 text-sm text-zinc-600">
-                Refreshing options for all ages.
-            </p>
-
-            <ul class="mt-4 space-y-2 text-sm text-zinc-700">
-                <li>• Craft sodas</li>
-                <li>• Sparkling water</li>
-                <li>• Non-alcoholic beer options</li>
-            </ul>
-        </div>
-    </div>
-
-        <!-- Soft standout note -->
-        <div class="mt-6 flex items-start gap-3 rounded-2xl bg-zinc-100 p-4 text-sm text-zinc-700">
-            <i class="fas fa-info-circle mt-0.5" aria-hidden="true"></i>
-            <span>
-            Drink selections may change based on availability.
+          <div class="flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
+              <i class="fas fa-glass-whiskey text-zinc-700" aria-hidden="true"></i>
             </span>
+            <h3 class="text-lg font-semibold">Non-Alcoholic</h3>
+          </div>
+          <p class="mt-3 text-sm text-zinc-600">Refreshing options for all ages.</p>
+          <ul class="mt-4 space-y-2 text-sm text-zinc-700">
+            <li>• Craft sodas</li>
+            <li>• Sparkling water</li>
+            <li>• Non-alcoholic beer options</li>
+          </ul>
         </div>
+      </div>
+
+      <div class="mt-6 flex items-start gap-3 rounded-2xl bg-zinc-100 p-4 text-sm text-zinc-700">
+        <i class="fas fa-info-circle mt-0.5" aria-hidden="true"></i>
+        <span>Drink selections may change based on availability.</span>
+      </div>
     </section>
-
-
   </main>
 
   <footer class="border-t border-zinc-200 bg-white">
