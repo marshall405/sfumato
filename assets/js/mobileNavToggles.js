@@ -19,6 +19,18 @@ menu?.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', () => setOpen(false));
 });
 
+ // Close when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menu || menu.classList.contains('hidden')) return;
+
+    if (
+        !menu.contains(e.target) &&
+        !btn.contains(e.target)
+    ) {
+        setOpen(false);
+    }
+});
+
 // Close on Escape
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') setOpen(false);

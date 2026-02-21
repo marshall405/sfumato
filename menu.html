@@ -1,68 +1,67 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu • Sfumato Pizzeria</title>
-  <meta name="description" content="Full menu for Sfumato Pizzeria — wood-fired Neapolitan pizzas, add-ons, and drinks." />
+  <meta name="description"
+    content="Full menu for Sfumato Pizzeria — wood-fired Neapolitan pizzas, add-ons, and drinks." />
   <link rel="stylesheet" href="/assets/css/output.css" />
   <script src="https://kit.fontawesome.com/b8cf95d72b.js" crossorigin="anonymous"></script>
   <script src="/assets/js/mobileNavToggles.js" defer></script>
+
+  <style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* adjust to your sticky header height */
+  }
+</style>
 </head>
 
 <body class="bg-zinc-50 text-zinc-900 antialiased">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur">
+  <header class="relative sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
       <a href="/" class="flex items-baseline gap-2" aria-label="Sfumato Pizzeria home">
         <span class="font-['Playfair_Display'] text-2xl font-bold tracking-tight">Sfumato</span>
-        <span class="hidden text-sm font-medium tracking-wide text-zinc-500 sm:inline">Pizzeria</span>
+        <span class="text-sm font-medium tracking-wide text-zinc-500">Pizzeria</span>
       </a>
 
       <nav class="hidden items-center gap-6 text-sm font-medium text-zinc-700 md:flex" aria-label="Primary">
-        <a class="hover:text-zinc-900" href="/">Home</a>
-        <a class="aria-[current=page]:text-zinc-900 aria-[current=page]:font-semibold hover:text-zinc-900" href="/menu.html" aria-current="page">Menu</a>
-        <a class="hover:text-zinc-900" href="/#drinks">Drinks</a>
-        <a class="hover:text-zinc-900" href="/gallery.html">Gallery</a>
-        <a class="hover:text-zinc-900" href="/#find-us">Find us</a>
-        <a class="hover:text-zinc-900" href="/#find-us">Hours</a>
+        <a class="relative text-zinc-600" href="/">Home</a>
+        <a class="text-zinc-900 font-semibold pointer-events-none" href="/menu.html" aria-current="page">Menu</a>
+        <a class="relative text-zinc-600" href="#drinks">Drinks</a>
+        <a class="relative text-zinc-600" href="/gallery.html">Gallery</a>
+        <a class="relative text-zinc-600" href="/#find-us">Find us</a>
+        <a class="relative text-zinc-600" href="/#hours">Hours</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <nav class="hidden items-center gap-3 sm:flex" aria-label="Social">
-          <a class="rounded-md p-2 hover:bg-zinc-100" href="https://www.facebook.com/profile.php?id=100037636219284" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <img loading="lazy" alt="" width="18" height="18" src="/assets/images/Facebook_Logo_Primary.png" />
-          </a>
-          <a class="rounded-md p-2 hover:bg-zinc-100" href="https://www.instagram.com/sfumatopizzeria/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img loading="lazy" alt="" width="18" height="18" src="/assets/images/Instagram_Glyph_Gradient.png" />
-          </a>
-        </nav>
-
-        <a href="tel:712-373-3007" class="hidden rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800 md:inline-flex">
+        <a href="tel:712-373-3007"
+          class="hidden rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800 md:inline-flex">
           Call 712-373-3007
         </a>
 
         <button id="mobileNavToggle"
-                class="inline-flex items-center justify-center rounded-lg p-2 text-zinc-700 hover:bg-zinc-100 md:hidden"
-                aria-controls="mobileNav"
-                aria-expanded="false"
-                aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
+          class="inline-flex items-center justify-center rounded-lg p-2 text-zinc-700 hover:bg-zinc-100 md:hidden"
+          aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobileNav" class="hidden md:hidden">
-      <div class="border-t border-zinc-200 bg-white">
-        <nav class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-base font-semibold text-zinc-800" aria-label="Mobile">
+    <div id="mobileNav" class="hidden md:hidden absolute left-0 right-0 top-full">
+      <div class="border-t border-zinc-200 bg-white shadow-lg">
+        <nav class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-base font-semibold text-zinc-800"
+          aria-label="Mobile">
           <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/">Home</a>
-          <a class="text-zinc-900" href="/menu.html" aria-current="page">Menu</a>
-          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#drinks">Drinks</a>
+          <a class="rounded-lg px-3 py-2 bg-zinc-100 font-semibold" href="/menu.html" aria-current="page">Menu</a>
           <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/gallery.html">Gallery</a>
           <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#find-us">Find us</a>
-          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#find-us">Hours</a>
-          <a class="mt-2 inline-flex items-center justify-center rounded-lg bg-zinc-900 px-4 py-3 text-white" href="tel:712-373-3007">
+          <a class="rounded-lg px-3 py-2 hover:bg-zinc-50" href="/#hours">Hours</a>
+
+          <a class="mt-2 inline-flex items-center justify-center rounded-lg bg-zinc-900 px-4 py-3 text-white"
+            href="tel:712-373-3007">
             Call 712-373-3007
           </a>
         </nav>
@@ -70,41 +69,31 @@
     </div>
   </header>
 
-    <main id="top" class="mx-auto max-w-6xl px-4 pb-20 pt-10 md:px-6">
-    <!-- Page header -->
-    <header>
+  <main id="top" class="mx-auto max-w-6xl px-4 pb-20 md:px-6">
+    <header class="relative pt-10">
       <h1 class="font-['Playfair_Display'] text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">Menu</h1>
-      <p class="mt-2 max-w-2xl text-zinc-600">
+      <p class="mt-2 text-zinc-600">
         Wood-fired Neapolitan pizzas. Ask your server for current drink selections and seasonal specials.
       </p>
 
-      <!-- Light banner (doesn't feel heavy) -->
       <div class="mt-6 overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm">
-        <div class="relative">
-            <img
-            src="/assets/images/sfumato_oven_2.png"
-            alt=""
-            class="h-32 w-full object-cover object-[center_40%] md:h-36"
-            loading="lazy"
-            decoding="async"
-            />
-            <div class="absolute inset-0 bg-black/25"></div>
-            <div class="absolute inset-0 flex items-end">
+        <div class="relative overflow-hidden h-36">
+          <img src="/assets/images/sfumato_oven_2.png" alt="" class="h-full w-full object-cover object-[center_40%]" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-black/25"></div>
+          <div class="absolute inset-0 flex items-end">
             <div class="p-4">
-                <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/15">
+              <p
+                class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/15">
                 <i class="fas fa-fire" aria-hidden="true"></i>
                 Wood-fired Neapolitan
-                </p>
+              </p>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-
-
+      </div>
     </header>
 
-    <!-- Pizzas -->
-    <section class="mt-12">
+    <section id="pizzas" class="mt-14">
       <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 class="text-2xl font-semibold tracking-tight">Neapolitan Pizzas</h2>
@@ -113,23 +102,16 @@
         <a href="#addons" class="text-sm font-semibold text-zinc-900 hover:underline">Add-ons →</a>
       </div>
 
-      <!-- Tight typography + subtle dividers + aligned prices -->
       <div class="mt-5 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
         <div class="divide-y divide-zinc-200">
-          <div class="px-5 py-4">
-            <div class="flex items-baseline justify-between gap-6">
-              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Margherita</h3>
-              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$14</span>
-            </div>
-            <p class="mt-1 text-sm leading-snug text-zinc-600">San Marzano tomato sauce, mozzarella, basil.</p>
-          </div>
-
           <div class="px-5 py-4">
             <div class="flex items-baseline justify-between gap-6">
               <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Pepperoni</h3>
               <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$15</span>
             </div>
-            <p class="mt-1 text-sm leading-snug text-zinc-600">San Marzano tomato sauce, mozzarella, pepperoni.</p>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              San Marzano tomato sauce, mozzarella, pepperoni.
+            </p>
           </div>
 
           <div class="px-5 py-4">
@@ -137,7 +119,49 @@
               <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Italian Sausage</h3>
               <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$15</span>
             </div>
-            <p class="mt-1 text-sm leading-snug text-zinc-600">San Marzano tomato sauce, mozzarella, Italian sausage.</p>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              San Marzano tomato sauce, mozzarella, Italian sausage.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Basil</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$13</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              San Marzano tomato sauce, garlic, mozzarella, fresh basil.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Fig & Caper</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$20</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              Olive oil, garlic, mozzarella, mushrooms, figs, capers, prosciutto ham, arugula.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">PBR</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$20</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              Ranch base, mozzarella, pepperoni, cherrywood smoked bacon, arugula, cherry tomatoes, fresh garlic, parmesan.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Margherita</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$14</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              San Marzano tomato sauce, mozzarella, fresh basil.
+            </p>
           </div>
 
           <div class="px-5 py-4">
@@ -145,19 +169,40 @@
               <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Bianca</h3>
               <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$15</span>
             </div>
-            <p class="mt-1 text-sm leading-snug text-zinc-600">Olive oil, garlic, mozzarella, arugula, prosciutto ham.</p>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              Olive oil, garlic, arugula, prosciutto ham, mozzarella.
+            </p>
           </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Marinara</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$14</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              San Marzano tomato sauce, garlic, oregano.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 text-sm font-semibold text-zinc-900">Barbeque</h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$20</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              BBQ sauce, mozzarella, red onion, pineapple, cilantro, choice of Italian sausage, pepperoni, or prosciutto ham.
+            </p>
+          </div>
+          
         </div>
       </div>
 
-      <!-- Softer + standout note -->
       <div class="mt-6 flex items-start gap-3 rounded-2xl bg-zinc-100 p-4 text-sm text-zinc-700">
         <i class="fas fa-leaf mt-0.5" aria-hidden="true"></i>
         <span>Pricing may vary slightly based on seasonal ingredients.</span>
       </div>
     </section>
 
-    <!-- Additional toppings -->
     <section class="mt-14" id="addons">
       <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -213,78 +258,434 @@
           </ul>
         </div>
       </div>
-      
+
     </section>
 
-    <!-- Drinks (expanded + icons) -->
-    <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Drinks</h2>
-      <p class="mt-1 text-sm text-zinc-600">Selections rotate — ask your server for what’s currently available.</p>
+    <section id="drinks" class="mt-14 ">
+      <h2 class="text-2xl font-semibold tracking-tight text-zinc-900">Drinks</h2>
+      <p class="mt-1 text-sm text-zinc-600">
+        Beer, wine & non-alcoholic options.
+      </p>
+      <div class="mt-5 rounded-3xl bg-white p-6 md:p-8 border border-zinc-200">
 
-      <div class="mt-6 grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <div class="flex items-center gap-3">
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
-              <i class="fas fa-beer text-zinc-700" aria-hidden="true"></i>
-            </span>
-            <h3 class="text-lg font-semibold">Beer</h3>
-          </div>
-          <p class="mt-3 text-sm text-zinc-600">A rotating mix of local favorites and classic styles.</p>
-          <ul class="mt-4 space-y-2 text-sm text-zinc-700">
-            <li>• Craft & local selections</li>
-            <li>• Light & crisp options</li>
-            <li>• Hoppy & seasonal brews</li>
-          </ul>
-        </div>
+        <section class="" id="wine">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h3 class="text-2xl font-semibold tracking-tight text-zinc-900">Wine</h3>
+              <p class="mt-1 text-sm text-zinc-600">Glass / Bottle pricing shown where available.</p>
+            </div>
 
-        <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <div class="flex items-center gap-3">
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
-              <i class="fas fa-wine-glass-alt text-zinc-700" aria-hidden="true"></i>
-            </span>
-            <h3 class="text-lg font-semibold">Wine</h3>
+            <!-- Key -->
+            <div class="flex flex-wrap items-center justify-start gap-2 text-xs text-zinc-600 sm:justify-end">
+              <span class="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1">
+                <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i> Glass
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1">
+                <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i> Bottle
+              </span>
+            </div>
           </div>
-          <p class="mt-3 text-sm text-zinc-600">Curated wines chosen to pair well with wood-fired pizza.</p>
-          <ul class="mt-4 space-y-2 text-sm text-zinc-700">
-            <li>• Italian reds & whites</li>
-            <li>• Light, pizza-friendly varietals</li>
-            <li>• Rotating bottles & pours</li>
-          </ul>
-        </div>
 
-        <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <div class="flex items-center gap-3">
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100">
-              <i class="fas fa-glass-whiskey text-zinc-700" aria-hidden="true"></i>
-            </span>
-            <h3 class="text-lg font-semibold">Non-Alcoholic</h3>
+          <!-- Two-column grid on desktop -->
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <!-- Buck Shack Cabernet (Bottle only) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Buck Shack Cabernet
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$60</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">
+                  Bold fruit flavors with cassis and plum, black pepper, long spicy finish.
+                </p>
+              </div>
+            </div>
+
+            <!-- The Crusher Merlot (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      The Crusher Merlot
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Spicy dark fruit flavors with seamless finish.</p>
+              </div>
+            </div>
+
+            <!-- 1919 Malbec (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      1919 Malbec
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Well-bodied, soft tannins, plum and ripe fruit aromas.</p>
+              </div>
+            </div>
+
+            <!-- Big Smooth Zinfandel (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Big Smooth Zinfandel
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Dark decadent fruit with smooth tannins.</p>
+              </div>
+            </div>
+
+            <!-- Gran Passione Italian Red Blend (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Gran Passione Italian Red Blend
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Full-bodied with rich red and black fruits.</p>
+              </div>
+            </div>
+
+            <!-- Big Smooth Cabernet (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Big Smooth Cabernet
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Robust black cherry and toasty oak with smooth finish.</p>
+              </div>
+            </div>
+
+            <!-- Fit Vine Pinot Noir (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Fit Vine Pinot Noir
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Toasted cedar with hints of orange.</p>
+              </div>
+            </div>
+
+            <!-- Stella Rosa Moscato or Rosso (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Stella Rosa Moscato or Rosso
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Red or white sweet sparkling wine.</p>
+              </div>
+            </div>
+
+            <!-- Sun Garden Riesling (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Sun Garden Riesling
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Tangy with a fruit-sweet finish.</p>
+              </div>
+            </div>
+
+            <!-- Sean Minor Chardonnay (Glass + Bottle) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-glass-alt text-zinc-500" aria-hidden="true"></i>
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Sean Minor Chardonnay
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$8 / $40</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Fruity, creamy, deliciously dry.</p>
+              </div>
+            </div>
+
+            <!-- Textbook Cabernet Sauvignon (Bottle only) -->
+            <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm">
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-6">
+                  <h3 class="min-w-0 text-sm font-semibold text-zinc-900">
+                    <span class="inline-flex items-center gap-2">
+                      <i class="fas fa-wine-bottle text-zinc-500" aria-hidden="true"></i>
+                      Textbook Cabernet Sauvignon
+                    </span>
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$60</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">
+                  Hand picked, hand sorted. 16 month maturation in small French oak barrels. (Bottle)
+                </p>
+              </div>
+            </div>
+
           </div>
-          <p class="mt-3 text-sm text-zinc-600">Refreshing options for all ages.</p>
-          <ul class="mt-4 space-y-2 text-sm text-zinc-700">
-            <li>• Craft sodas</li>
-            <li>• Sparkling water</li>
-            <li>• Non-alcoholic beer options</li>
-          </ul>
+        </section>
+
+        <section class="mt-10" id="beer">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h3 class="text-2xl font-semibold tracking-tight text-zinc-900">Beer</h3>
+              <p class="mt-1 text-sm text-zinc-600">Ask about our rotating draft beers.</p>
+            </div>
+          </div>
+
+          <div class="mt-5 overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
+            <div class="divide-y divide-zinc-200">
+
+              <!-- Premium Bottles -->
+              <div class="px-5 py-4">
+                <h3 class="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                  <i class="fas fa-beer text-zinc-500" aria-hidden="true"></i>
+                  Premium Bottles
+                </h3>
+
+                <div class="grid gap-x-8 gap-y-2 md:grid-cols-2 text-sm text-zinc-700">
+                  <div class="flex justify-between"><span>Dragon’s Milk</span><span class="tabular-nums">$7</span></div>
+                  <div class="flex justify-between"><span>Vanilla Porter</span><span class="tabular-nums">$7</span></div>
+                  <div class="flex justify-between"><span>Sam Smith Organic Chocolate Stout</span><span class="tabular-nums">$7</span></div>
+                  <div class="flex justify-between"><span>Sam Smith Oatmeal Stout</span><span class="tabular-nums">$7</span></div>
+                  <div class="flex justify-between"><span>Spaten</span><span class="tabular-nums">$7</span></div>
+                </div>
+              </div>
+
+              <!-- Specialty Bottles -->
+              <div class="px-5 py-4">
+                <h3 class="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                  <i class="fas fa-beer text-zinc-500" aria-hidden="true"></i>
+                  Specialty Bottles
+                </h3>
+
+                <div class="grid gap-x-8 gap-y-2 md:grid-cols-2 text-sm text-zinc-700">
+                  <div class="flex justify-between"><span>Fat Tire</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Ranger</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Sam Adams Lager</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Stella Artois</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Shiner Bock</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Blue Moon</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Stella Cidre</span><span class="tabular-nums">$6</span></div>
+                  <div class="flex justify-between"><span>Cider</span><span class="tabular-nums">$6</span></div>
+                </div>
+              </div>
+
+              <!-- Domestic Bottles -->
+              <div class="px-5 py-4">
+                <h3 class="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                  <i class="fas fa-beer text-zinc-500" aria-hidden="true"></i>
+                  Domestic Bottles
+                </h3>
+
+                <div class="grid gap-x-8 gap-y-2 md:grid-cols-2 text-sm text-zinc-700">
+                  <div class="flex justify-between"><span>Budweiser</span><span class="tabular-nums">$5.50</span></div>
+                  <div class="flex justify-between"><span>Bud Light</span><span class="tabular-nums">$5.50</span></div>
+                  <div class="flex justify-between"><span>Coors Original</span><span class="tabular-nums">$5.50</span></div>
+                  <div class="flex justify-between"><span>Coors Light</span><span class="tabular-nums">$5.50</span></div>
+                  <div class="flex justify-between"><span>Busch Light</span><span class="tabular-nums">$5.50</span></div>
+                  <div class="flex justify-between"><span>Michelob Ultra Light</span><span class="tabular-nums">$5.50</span></div>
+                  <div class="flex justify-between"><span>Michelob Ultra Light Gold</span><span class="tabular-nums">$5.50</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-10" id="non-alcoholic">
+          <h3 class="text-2xl font-semibold tracking-tight text-zinc-900">Non-Alcoholic</h3>
+
+          <div class="mt-5 overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
+            <div class="divide-y divide-zinc-200">
+
+              <div class="px-5 py-4">
+                <div class="flex items-baseline justify-between gap-6">
+                  <h3 class="min-w-0 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                    <i class="fas fa-glass-whiskey text-zinc-500" aria-hidden="true"></i>
+                    Hand Crafted Sodas
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$3</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Millstream of Iowa</p>
+                <p class="mt-1 text-sm text-zinc-600">Root beer, vanilla cream, orange, black cherry.</p>
+              </div>
+
+              <div class="px-5 py-4">
+                <div class="flex items-baseline justify-between gap-6">
+                  <h3 class="min-w-0 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                    <i class="fas fa-glass-water text-zinc-500" aria-hidden="true"></i>
+                    Sodas
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$2.50</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">Coke, Diet Coke, Dr. Pepper, Sprite.</p>
+              </div>
+
+              <div class="px-5 py-4">
+                <div class="flex items-baseline justify-between gap-6">
+                  <h3 class="min-w-0 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                    <i class="fas fa-bottle-water text-zinc-500" aria-hidden="true"></i>
+                    Burbach Dairy
+                  </h3>
+                  <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$2.50</span>
+                </div>
+                <p class="mt-1 text-sm text-zinc-600">White or chocolate milk.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="mt-14" id="desserts">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Desserts</h2>
+          <p class="mt-1 text-sm text-zinc-600">Sweet finishes — availability may vary.</p>
         </div>
       </div>
 
-      <div class="mt-6 flex items-start gap-3 rounded-2xl bg-zinc-100 p-4 text-sm text-zinc-700">
-        <i class="fas fa-info-circle mt-0.5" aria-hidden="true"></i>
-        <span>Drink selections may change based on availability.</span>
+      <div class="mt-5 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div class="divide-y divide-zinc-200">
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                <i class="fas fa-ice-cream text-zinc-500" aria-hidden="true"></i>
+                Rote Grütze
+              </h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$6.50</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              Berry reduction topped with gelato.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                <i class="fas fa-birthday-cake text-zinc-500" aria-hidden="true"></i>
+                Dark Chocolate Cake
+              </h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$6.50</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              Rich chocolate cake.
+            </p>
+          </div>
+
+          <div class="px-5 py-4">
+            <div class="flex items-baseline justify-between gap-6">
+              <h3 class="min-w-0 flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                <i class="fas fa-snowflake text-amber-500" aria-hidden="true"></i>
+                Gelato
+              </h3>
+              <span class="shrink-0 text-sm font-semibold tabular-nums text-zinc-900">$6.50</span>
+            </div>
+            <p class="mt-1 text-sm leading-snug text-zinc-600">
+              Ask about today’s flavors.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-zinc-200 bg-white">
-    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-6">
-      <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-zinc-700">
-        <a class="hover:text-zinc-900" href="#menu">Menu</a>
-        <a class="hover:text-zinc-900" href="/#drinks">Drinks</a>
-        <a class="hover:text-zinc-900" href="/#find-us">Find us</a>
-        <a class="hover:text-zinc-900" href="/#find-us">Hours</a>
+  <footer class="relative overflow-hidden border-t border-zinc-200 bg-white">
+    <!-- Legacy logo watermark -->
+    <img src="/assets/images/logo-legacy.png" alt="" aria-hidden="true" class="
+      pointer-events-none
+      absolute inset-0 m-auto
+      h-36 md:h-36
+      opacity-[0.04]
+      select-none
+    " />
+
+    <div class="relative z-10 mx-auto max-w-6xl px-4 py-10 md:px-6">
+      <div class="
+        flex flex-wrap items-center justify-center gap-x-6 gap-y-3
+        text-center
+      ">
+        <!-- Footer nav -->
+        <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-zinc-600">
+          <a href="/" class="relative text-zinc-600">Home</a>
+          <a href="/menu.html" class="relative text-zinc-600">Menu</a>
+          <a href="/gallery.html" class="relative text-zinc-600">Gallery</a>
+          <a href="/#reviews" class="relative text-zinc-600">Reviews</a>
+          <a href="/#find-us" class="relative text-zinc-600">Find us</a>
+          <a href="/#hours" class="relative text-zinc-600">Hours</a>
+        </nav>
+
+        <!-- Divider (desktop only) -->
+        <span class="hidden h-4 w-px bg-zinc-300 md:block"></span>
+
+        <!-- Copyright -->
+        <p class="text-sm text-zinc-500">
+          ©
+          <script>document.write(new Date().getFullYear());</script> Sfumato Pizzeria
+        </p>
       </div>
-      <p class="text-sm text-zinc-500">© <script>document.write(new Date().getFullYear());</script> Sfumato Pizzeria. All rights reserved.</p>
     </div>
   </footer>
 </body>
+
 </html>
